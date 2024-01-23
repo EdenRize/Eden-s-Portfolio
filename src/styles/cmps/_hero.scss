@@ -120,7 +120,7 @@
             width: 1px;
             height: 1px;
             border-radius: 50%;
-            margin-block: 110px;
+            margin-block: 90px;
             animation: colorLoop 4s infinite alternate;
 
             @include for-table-layout {
@@ -142,15 +142,18 @@
 
             @include for-desktop-layout {
                 margin-inline-end: 200px;
+
             }
 
             @include for-full-layout {
-                margin-inline: 250px;
+                margin-inline-start: 250px;
+                width: 190px;
+                height: 190px;
             }
 
             img {
-                width: 250px;
-                height: 250px;
+                width: 210px;
+                height: 210px;
 
                 @include for-table-layout {
                     width: 300px;
