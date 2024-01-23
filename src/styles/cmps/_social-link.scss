@@ -7,6 +7,11 @@
         transition: .2s;
         animation: scaleIn 0.5s ease-out;
 
+        @include for-mobile-layout {
+            width: 4.4rem;
+            height: 4.4rem;
+        }
+
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
@@ -14,6 +19,11 @@
             height: 2.5rem;
             transform: scale(0, 0);
             animation: scaleIn .5s ease-out .5s forwards;
+
+            @include for-mobile-layout {
+                width: 3.4rem;
+                height: 3.4rem;
+            }
 
             img {
                 width: 27px;

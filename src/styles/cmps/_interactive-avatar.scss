@@ -3,6 +3,12 @@
     .avatar {
         width: 3rem;
         height: 3rem;
+
+        @include for-mobile-layout {
+            width: 3.5rem;
+            height: 3.5rem;
+
+        }
     }
 
     .work-status {

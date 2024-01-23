@@ -9,12 +9,22 @@
             line-height: 40px;
             font-size: 2.2rem;
             color: $font-clr2;
+
+            @include for-mobile-layout {
+                line-height: 60px;
+                font-size: 2.3rem;
+            }
         }
 
         h2 {
             line-height: 33px;
             font-size: 1.4rem;
             color: $font-clr1;
+
+            @include for-mobile-layout {
+                font-size: 1.5rem;
+
+            }
         }
     }
 
