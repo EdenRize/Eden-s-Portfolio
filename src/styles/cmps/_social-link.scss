@@ -12,6 +12,25 @@
             height: 4.4rem;
         }
 
+        @include for-table-layout {
+            position: absolute;
+
+            &.gmail {
+                top: 65%;
+                left: 3%;
+            }
+
+            &.github {
+                top: 13%;
+                left: 45%;
+            }
+
+            &.linkedin {
+                top: 40%;
+                right: 5%;
+            }
+        }
+
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
@@ -32,6 +51,12 @@
                 opacity: 0;
 
                 animation: fadeIn 0.5s ease-out 1s forwards;
+
+                @include for-table-layout {
+                    width: 41px;
+                    height: 41px;
+
+                }
             }
         }
 

@@ -2,6 +2,10 @@
     padding-top: 7rem;
     padding-inline: var(--padding-inline);
 
+    @include for-table-layout {
+        padding-top: 12rem;
+    }
+
     .header-container {
         margin-block: 2.5rem 2rem;
 
@@ -14,6 +18,11 @@
                 line-height: 60px;
                 font-size: 2.3rem;
             }
+
+            @include for-table-layout {
+                line-height: 80px;
+                font-size: 3rem;
+            }
         }
 
         h2 {
@@ -23,13 +32,22 @@
 
             @include for-mobile-layout {
                 font-size: 1.5rem;
+            }
 
+            @include for-table-layout {
+                line-height: 50px;
+                font-size: 2.2rem;
             }
         }
     }
 
     .content-container {
         align-items: end;
+
+        @include for-table-layout {
+            align-items: center;
+
+        }
 
         p {
             font-size: .75rem;
@@ -46,11 +64,21 @@
             margin-block: 70px;
             margin-inline-end: 50px;
             animation: colorLoop 4s infinite alternate;
-            // box-shadow: 0px 5px 84px 70px rgba(241, 41, 213, 0.58);
+
+            @include for-table-layout {
+                margin-block: 110px;
+
+            }
 
             img {
                 width: 170px;
                 height: 170px;
+
+                @include for-table-layout {
+                    width: 250px;
+                    height: 250px;
+
+                }
             }
 
             @keyframes colorLoop {

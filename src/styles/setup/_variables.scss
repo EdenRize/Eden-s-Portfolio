@@ -9,7 +9,6 @@ $font-clr5: #ffffff80;
 :root {
     //paddings
     --padding-inline: 2.5rem;
-
 }
 
 
@@ -18,3 +17,15 @@ $mobile-breakpoint: 393px;
 $tablet-breakpoint: 640px;
 $narrow-breakpoint: 768px;
 $desktop-breakpoint: 1024px;
+
+@media (min-width: $mobile-breakpoint) {
+    :root {
+        --padding-inline: 3rem;
+    }
+}
+
+@media (min-width: $tablet-breakpoint) {
+    :root {
+        --padding-inline: 7rem;
+    }
+}
