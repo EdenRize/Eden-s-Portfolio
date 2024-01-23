@@ -28,7 +28,7 @@ export function Hero() {
                 <h2 className="font-Gilmer-Bold">I'm developing Creative & Interactive webapps 🚀</h2>
             </div>
 
-            <div className="flex column space-between content-container">
+            <div className="flex space-between content-container">
                 <p className="font-Gilmer-Light">As a frontend developer,
                     my expertise lies in creating seamless and intuitive user experiences.
                     I specialize in using cutting-edge technologies to produce high-quality web applications.

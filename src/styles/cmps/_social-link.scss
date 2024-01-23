@@ -31,6 +31,21 @@
             }
         }
 
+        @include for-narrow-layout {
+            width: 4.8rem;
+            height: 4.8rem;
+
+            &.github {
+                top: 11%;
+                left: 43%;
+            }
+
+            &.linkedin {
+                top: 40%;
+                right: 5%;
+            }
+        }
+
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
@@ -42,6 +57,12 @@
             @include for-mobile-layout {
                 width: 3.4rem;
                 height: 3.4rem;
+            }
+
+            @include for-narrow-layout {
+                width: 3.8rem;
+                height: 3.8rem;
+
             }
 
             img {
@@ -56,6 +77,11 @@
                     width: 41px;
                     height: 41px;
 
+                }
+
+                @include for-narrow-layout {
+                    width: 43px;
+                    height: 43px;
                 }
             }
         }

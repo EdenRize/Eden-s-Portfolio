@@ -29,3 +29,9 @@ $desktop-breakpoint: 1024px;
         --padding-inline: 7rem;
     }
 }
+
+@media (min-width: $narrow-breakpoint) {
+    :root {
+        --padding-inline: 8rem;
+    }
+}

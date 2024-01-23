@@ -23,6 +23,10 @@
                 line-height: 80px;
                 font-size: 3rem;
             }
+
+            @include for-narrow-layout {
+                font-size: 3.5rem;
+            }
         }
 
         h2 {
@@ -38,15 +42,25 @@
                 line-height: 50px;
                 font-size: 2.2rem;
             }
+
+            @include for-narrow-layout {
+                line-height: 70px;
+                font-size: 2.6rem;
+
+            }
         }
     }
 
     .content-container {
+        flex-direction: column;
         align-items: end;
 
         @include for-table-layout {
             align-items: center;
+        }
 
+        @include for-narrow-layout {
+            flex-direction: row;
         }
 
         p {
@@ -54,6 +68,12 @@
             line-height: 1.25rem;
             color: $font-clr3;
             margin-block-end: 1.5rem;
+
+            @include for-table-layout {
+                font-size: .875rem;
+                line-height: 1.25rem;
+                margin-block-end: unset;
+            }
         }
 
         .img-container {
@@ -61,13 +81,17 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            margin-block: 70px;
+            margin: 70px;
             margin-inline-end: 50px;
             animation: colorLoop 4s infinite alternate;
 
             @include for-table-layout {
-                margin-block: 110px;
+                margin: 110px;
+            }
 
+            @include for-narrow-layout {
+                margin-block: 110px;
+                margin-inline: 150px 80px;
             }
 
             img {
@@ -103,8 +127,6 @@
     }
 
     .socials-container {
-        min-height: 3.5rem;
-
         margin-block: 3.5rem;
     }
 }
