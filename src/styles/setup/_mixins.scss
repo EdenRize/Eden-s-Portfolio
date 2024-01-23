@@ -35,6 +35,13 @@
     }
 }
 
+//1536px +
+@mixin for-full-layout {
+    @media (min-width: $full-breakpoint) {
+        @content;
+    }
+}
+
 /* Media  Mixins */
 @mixin aspect-ratio($width, $height) {
     position: relative;

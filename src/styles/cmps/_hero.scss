@@ -37,6 +37,10 @@
                 line-height: 120px;
                 font-size: 6.2rem;
             }
+
+            @include for-full-layout {
+                font-size: 6.5rem;
+            }
         }
 
         h2 {
@@ -65,6 +69,11 @@
 
             @include for-desktop-layout {
                 font-size: 5rem;
+            }
+
+            @include for-full-layout {
+                line-height: 120px;
+                font-size: 5.5rem;
             }
         }
     }
@@ -98,6 +107,12 @@
                 font-size: 1.3rem;
                 line-height: 2rem;
             }
+
+            @include for-full-layout {
+                font-size: 1.5rem;
+                line-height: 2.25rem;
+
+            }
         }
 
         .img-container {
@@ -129,6 +144,10 @@
                 margin-inline-end: 200px;
             }
 
+            @include for-full-layout {
+                margin-inline: 250px;
+            }
+
             img {
                 width: 170px;
                 height: 170px;
@@ -141,6 +160,11 @@
                 @include for-desktop-layout {
                     width: 300px;
                     height: 300px;
+                }
+
+                @include for-full-layout {
+                    width: 420px;
+                    height: 420px;
                 }
             }
 

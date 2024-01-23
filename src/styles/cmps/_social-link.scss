@@ -66,6 +66,11 @@
             }
         }
 
+        @include for-full-layout {
+            width: 6rem;
+            height: 6rem;
+        }
+
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
@@ -92,6 +97,11 @@
             @include for-desktop-layout {
                 width: 4.6rem;
                 height: 4.6rem;
+            }
+
+            @include for-full-layout {
+                width: 5rem;
+                height: 5rem;
             }
 
             img {
