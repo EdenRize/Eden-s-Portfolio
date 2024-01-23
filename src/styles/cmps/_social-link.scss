@@ -1,22 +1,27 @@
 .social-link {
-
     .icon-container {
         background-color: $font-clr2;
         border-radius: 50%;
         width: 3.5rem;
         height: 3.5rem;
         transition: .2s;
+        animation: scaleIn 0.5s ease-out;
 
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
             width: 2.5rem;
             height: 2.5rem;
+            transform: scale(0, 0);
+            animation: scaleIn .5s ease-out .5s forwards;
 
             img {
                 width: 27px;
                 height: 27px;
                 transition: .2s;
+                opacity: 0;
+
+                animation: fadeIn 0.5s ease-out 1s forwards;
             }
         }
 
@@ -25,8 +30,27 @@
 
             img {
                 transform: scale(0.9, 0.9);
-
             }
         }
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0, 0);
+    }
+
+    65% {
+        transform: scale(1.1, 1.1);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }

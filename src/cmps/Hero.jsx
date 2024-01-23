@@ -32,7 +32,7 @@ export function Hero() {
                 <p className="font-Gilmer-Light">As a frontend developer,
                     my expertise lies in creating seamless and intuitive user experiences.
                     I specialize in using cutting-edge technologies to produce high-quality web applications.
-                    Specifically, I have vast knowledge of ReactJS and NodeJS, which allow me to build complex and dynamic applications with ease.
+                    Specifically, I have vast knowledge of ReactJS, Vue & NodeJS, which allow me to build complex and dynamic applications with ease.
                 </p>
 
                 <div className="flex align-center justify-center img-container">
