@@ -1,0 +1,32 @@
+.social-link {
+
+    .icon-container {
+        background-color: $font-clr2;
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        transition: .2s;
+
+        .img-container {
+            background-color: $font-clr4;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+
+            img {
+                width: 27px;
+                height: 27px;
+                transition: .2s;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1, 1.1);
+
+            img {
+                transform: scale(0.9, 0.9);
+
+            }
+        }
+    }
+}

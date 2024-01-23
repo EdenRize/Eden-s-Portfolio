@@ -1,0 +1,22 @@
+//colors
+$main-clr: rgb(66 15 231);
+$font-clr1: #ffffff;
+$font-clr2: #ffffffb2;
+$font-clr3: #ffffff99;
+$font-clr4: #ffffffe6;
+$font-clr5: #ffffff80;
+
+:root {
+    //paddings
+    --padding-inline: 2.5rem;
+
+    //animations
+    --animate-delay: 0.5s;
+}
+
+
+// Breakpoints
+$mobile-breakpoint: 393px;
+$tablet-breakpoint: 640px;
+$narrow-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
