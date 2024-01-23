@@ -16,7 +16,9 @@ $font-clr5: #ffffff80;
 $mobile-breakpoint: 393px;
 $tablet-breakpoint: 640px;
 $narrow-breakpoint: 768px;
-$desktop-breakpoint: 1024px;
+$wide-breakpoint: 1024px;
+$desktop-breakpoint: 1280px;
+$full-breakpoint: 1536px;
 
 @media (min-width: $mobile-breakpoint) {
     :root {
@@ -33,5 +35,17 @@ $desktop-breakpoint: 1024px;
 @media (min-width: $narrow-breakpoint) {
     :root {
         --padding-inline: 8rem;
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    :root {
+        --padding-inline: 10rem;
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    :root {
+        --padding-inline: 11rem;
     }
 }

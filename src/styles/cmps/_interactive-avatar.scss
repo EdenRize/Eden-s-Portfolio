@@ -13,6 +13,11 @@
             width: 4rem;
             height: 4rem;
         }
+
+        @include for-wide-layout {
+            width: 5rem;
+            height: 5rem;
+        }
     }
 
     .work-status {
@@ -36,6 +41,11 @@
             @include for-narrow-layout {
                 font-size: 1rem;
                 line-height: 1.5rem;
+            }
+
+            @include for-desktop-layout {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
             }
 
             &:hover {

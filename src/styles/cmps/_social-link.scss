@@ -46,6 +46,26 @@
             }
         }
 
+        @include for-wide-layout {
+            width: 5.2rem;
+            height: 5.2rem;
+
+            &.github {
+                top: 9%;
+                left: 47%;
+            }
+        }
+
+        @include for-desktop-layout {
+            width: 5.6rem;
+            height: 5.6rem;
+
+            &.github {
+                top: 8.2%;
+                left: 50%;
+            }
+        }
+
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
@@ -62,7 +82,16 @@
             @include for-narrow-layout {
                 width: 3.8rem;
                 height: 3.8rem;
+            }
 
+            @include for-wide-layout {
+                width: 4.2rem;
+                height: 4.2rem;
+            }
+
+            @include for-desktop-layout {
+                width: 4.6rem;
+                height: 4.6rem;
             }
 
             img {

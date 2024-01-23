@@ -22,7 +22,14 @@
 }
 
 //1024px +
-@mixin for-normal-layout {
+@mixin for-wide-layout {
+    @media (min-width: $wide-breakpoint) {
+        @content;
+    }
+}
+
+//1280px +
+@mixin for-desktop-layout {
     @media (min-width: $desktop-breakpoint) {
         @content;
     }
