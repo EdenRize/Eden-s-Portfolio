@@ -24,8 +24,8 @@ export function Hero() {
             <InteractiveAvatar />
 
             <div className="header-container">
-                <h1 className="font-Gilmer-Outline">Hello! I'm Eden</h1>
-                <h2 className="font-Gilmer-Bold">I'm developing Creative & Interactive webapps 🚀</h2>
+                <h1 className="font-Gilmer-Outline"><span className="span-1">Hello!</span> <span className="span-2">I'm</span> <span className="span-3">Eden</span></h1>
+                <h2 className="font-Gilmer-Bold"><span className="span-4">I'm</span> <span className="span-5">developing</span> <span className="span-6">Creative</span> <span className="span-7">&</span> <span className="span-8">Interactive</span> <span className="span-9">webapps</span> <span className="span-10">🚀</span></h2>
             </div>
 
             <div className="flex space-between content-container">

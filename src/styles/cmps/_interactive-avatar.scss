@@ -1,4 +1,6 @@
 .interactive-avatar {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 
     .avatar {
         width: 3rem;
@@ -54,3 +56,5 @@
         }
     }
 }
+
+@include fadeIn;
