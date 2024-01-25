@@ -1,3 +1,5 @@
+@import '../setup/animations';
+
 .hero {
     padding-top: 7rem;
     padding-inline: var(--padding-inline);
@@ -166,23 +168,9 @@
                 }
             }
 
-            @keyframes colorLoop {
+            @include colorLoop;
 
-                0%,
-                100% {
-                    box-shadow: 0px 5px 84px 70px rgba(241, 41, 213, 0.58);
-                }
 
-                33% {
-                    box-shadow: 0px 5px 84px 70px rgba(241, 41, 213, 0.58),
-                        0px 5px 84px 70px rgba(41, 241, 213, 0.58);
-                }
-
-                66% {
-                    box-shadow: 0px 5px 84px 70px rgba(41, 241, 213, 0.58),
-                        0px 5px 84px 70px rgba(213, 41, 241, 0.58);
-                }
-            }
         }
 
     }
