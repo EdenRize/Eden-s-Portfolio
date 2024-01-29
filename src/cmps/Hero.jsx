@@ -29,7 +29,7 @@ export function Hero() {
             </div>
 
             <div className="flex space-between content-container">
-                <p className="font-Gilmer-Light">As a frontend developer,
+                <p className="font-Gilmer-Light">As a Full-Stack developer,
                     my expertise lies in creating seamless and intuitive user experiences.
                     I specialize in using cutting-edge technologies to produce high-quality web applications.
                     Specifically, I have vast knowledge of ReactJS, Vue & NodeJS, which allow me to build complex and dynamic applications with ease.
