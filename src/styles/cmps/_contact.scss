@@ -36,7 +36,7 @@
         }
     }
 
-    p {
+    .info {
         color: $font-clr5;
         margin-block-start: 2rem;
         line-height: 1.5rem;
@@ -64,6 +64,43 @@
             font-size: 1.875rem;
             line-height: 2.25rem;
             max-width: 64rem;
+        }
+    }
+
+    .resume {
+        background-color: transparent;
+        margin-block: 2rem;
+        color: $font-clr1;
+        border: 1px $font-clr5 solid;
+        border-radius: 9999px;
+        padding-block: 12px;
+        padding-inline: 24px;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(36 6 88/1);
+        }
+
+        img {
+            margin-inline-end: 0.5rem;
+
+            @include for-table-layout {
+                width: 20px;
+            }
+
+            @include for-desktop-layout {
+                width: 25px;
+            }
+        }
+
+        @include for-table-layout {
+            margin-block: 2.5rem;
+            font-size: 1.2rem;
+        }
+
+        @include for-desktop-layout {
+            font-size: 1.5rem;
         }
     }
 }
