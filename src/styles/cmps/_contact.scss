@@ -1,0 +1,69 @@
+.contact {
+    padding-inline: var(--padding-inline);
+
+    h1 {
+        color: $font-clr1;
+        line-height: 3.5rem;
+        font-size: 2.9rem;
+
+        @include for-mobile-layout {
+            font-size: 3.1rem;
+        }
+
+        @include for-table-layout {
+            line-height: 3.5rem;
+            font-size: 3rem;
+        }
+
+        @include for-narrow-layout {
+            line-height: 4rem;
+            font-size: 3.4rem;
+        }
+
+        @include for-wide-layout {
+            line-height: 5rem;
+            font-size: 4.9rem;
+        }
+
+        @include for-desktop-layout {
+            line-height: 6.5rem;
+            font-size: 6.1rem;
+        }
+
+        @include for-full-layout {
+            line-height: 7rem;
+            font-size: 8rem;
+        }
+    }
+
+    p {
+        color: $font-clr5;
+        margin-block-start: 2rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+
+        a {
+            font-family: Gilmer-Medium, sans-serif;
+            color: $font-clr1;
+            text-decoration: none;
+        }
+
+        @include for-table-layout {
+            margin-block-start: 2.5rem;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+
+        @include for-desktop-layout {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            max-width: 42rem;
+        }
+
+        @include for-full-layout {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            max-width: 64rem;
+        }
+    }
+}

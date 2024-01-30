@@ -3,15 +3,28 @@
     display: flex;
     overflow: hidden;
     width: 100%;
-    height: 300px;
+    height: 130px;
     padding-block-start: 50px;
 
+    @include for-mobile-layout {
+        height: 200px;
+    }
+
+    @include for-table-layout {
+        height: 250px;
+    }
+
     @include for-narrow-layout {
+        height: 360px;
         padding-block-start: 90px;
     }
 
     @include for-wide-layout {
-        padding-block-start: 115px;
+        padding-block-start: 110px;
+    }
+
+    @include for-full-layout {
+        height: 450px;
     }
 
     img {
@@ -19,7 +32,6 @@
         left: 50%;
         transform: translate(-50%);
         width: 100%;
-        height: 100%;
         object-fit: cover;
         transition: 0.5s;
         width: 60px;

@@ -6,9 +6,9 @@ export function Carousel({ imgs }) {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prevImage) => (prevImage + 1) % imgs.length);
-        }, 3000); // Change the interval as needed (e.g., every 3 seconds)
+        }, 1500)
 
-        return () => clearInterval(interval); // Cleanup the interval on component unmount
+        return () => clearInterval(interval)
     }, []);
 
     const getPrevIdx = (idx) => (idx - 1 + imgs.length) % imgs.length;
