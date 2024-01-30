@@ -1,0 +1,150 @@
+.projects-list {
+
+    .project {
+        flex-direction: column;
+        text-wrap: wrap;
+
+        @include for-wide-layout {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .proj-img-container {
+            height: 250px;
+
+            @include for-table-layout {
+                height: 300px;
+            }
+
+            @include for-narrow-layout {
+                height: 350px;
+            }
+
+            @include for-wide-layout {
+                height: 400px;
+            }
+
+            @include for-full-layout {
+                height: 500px;
+            }
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .info-container {
+            @include for-wide-layout {
+                margin-inline-start: 8px;
+                text-align: right;
+            }
+
+            .title {
+                color: $font-clr1;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                margin-block-start: 1.25rem;
+
+                @include for-table-layout {
+                    font-size: 1.875rem;
+                    line-height: 2.25rem;
+                }
+
+                @include for-wide-layout {
+                    font-size: 2.25rem;
+                    line-height: 2.5rem;
+                    margin-block-start: 0;
+                }
+
+                @include for-full-layout {
+                    font-size: 3rem;
+                    line-height: 1;
+                }
+            }
+
+            .description {
+                color: $font-clr4;
+                font-size: .875rem;
+                line-height: 1.25rem;
+                margin-block-start: 8px;
+
+                @include for-mobile-layout {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+
+                @include for-table-layout {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    margin-block-start: 12px;
+                }
+
+                @include for-wide-layout {
+                    margin-block-start: 16px;
+                }
+            }
+
+            .github-container {
+                margin-block-start: 8px;
+
+
+                @include for-table-layout {
+                    margin-block-start: 12px;
+                }
+
+                @include for-wide-layout {
+                    justify-content: flex-end;
+                    margin-block-start: 16px;
+                }
+
+                .arrow {
+                    margin-inline-start: 20px;
+
+                    &:hover {
+                        rotate: -15deg;
+                    }
+
+                }
+
+                .github:hover {
+                    transform: translate(0, -15%);
+                }
+
+                .github,
+                .arrow {
+                    transition: .2s;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+
+                        @include for-mobile-layout {
+                            width: 24px;
+                            height: 24px;
+                        }
+
+                        @include for-table-layout {
+                            width: 28px;
+                            height: 28px;
+                        }
+
+                        @include for-wide-layout {
+                            width: 32px;
+                            height: 32px;
+                        }
+
+                        @include for-full-layout {
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
