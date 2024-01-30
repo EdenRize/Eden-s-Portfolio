@@ -1,0 +1,34 @@
+.tools {
+
+    h1 {
+        padding-inline: 10px;
+        color: $font-clr3;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 2.5rem;
+
+        @include for-mobile-layout {
+            font-size: 3rem;
+        }
+
+        @include for-table-layout {
+            font-size: 4rem;
+        }
+
+        @include for-narrow-layout {
+            font-size: 5rem;
+        }
+
+        @include for-wide-layout {
+            font-size: 6rem;
+        }
+
+        @include for-desktop-layout {
+            font-size: 7rem;
+        }
+
+        @include for-full-layout {
+            font-size: 8rem;
+        }
+    }
+}

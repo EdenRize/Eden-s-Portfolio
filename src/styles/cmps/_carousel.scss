@@ -1,0 +1,76 @@
+.carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    padding-block-start: 50px;
+
+    @include for-narrow-layout {
+        padding-block-start: 90px;
+    }
+
+    @include for-wide-layout {
+        padding-block-start: 115px;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        width: 60px;
+        height: 60px;
+
+        @include for-mobile-layout {
+            width: 90px;
+            height: 90px;
+        }
+
+        @include for-table-layout {
+            width: 120px;
+            height: 120px;
+        }
+
+        @include for-narrow-layout {
+            width: 170px;
+            height: 170px;
+        }
+
+        @include for-full-layout {
+            width: 200px;
+            height: 200px;
+        }
+
+        &.current {
+            opacity: 1;
+            scale: 1.2;
+            transform: translate(-40%);
+        }
+
+        &.prev {
+            opacity: 0.5;
+            transform: translateX(-200%);
+        }
+
+        &.next {
+            opacity: 0.5;
+            transform: translatex(100%);
+        }
+
+        &.hidden {
+            opacity: 0;
+
+            &.after {
+                transform: translatex(250%);
+            }
+
+            &.before {
+                transform: translatex(-350%);
+            }
+        }
+    }
+}

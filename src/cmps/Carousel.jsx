@@ -1,0 +1,44 @@
+import { useEffect, useState } from "react";
+
+export function Carousel({ imgs }) {
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImage((prevImage) => (prevImage + 1) % imgs.length);
+        }, 3000); // Change the interval as needed (e.g., every 3 seconds)
+
+        return () => clearInterval(interval); // Cleanup the interval on component unmount
+    }, []);
+
+    const getPrevIdx = (idx) => (idx - 1 + imgs.length) % imgs.length;
+    const getNextIdx = (idx) => (idx + 1) % imgs.length;
+    const getTwoBeforeIdx = (idx) => (idx - 2 + imgs.length) % imgs.length;
+    const getTwoAfterIdx = (idx) => (idx + 2) % imgs.length;
+
+    const renderImages = () => {
+        const currentIdx = currentImage;
+        const prevIdx = getPrevIdx(currentIdx);
+        const nextIdx = getNextIdx(currentIdx);
+        const twoBeforeIdx = getTwoBeforeIdx(currentIdx);
+        const twoAfterIdx = getTwoAfterIdx(currentIdx);
+
+        const imagesToRender = [
+            { key: twoBeforeIdx, src: imgs[twoBeforeIdx], className: 'hidden before' },
+            { key: prevIdx, src: imgs[prevIdx], className: 'prev' },
+            { key: currentIdx, src: imgs[currentIdx], className: 'current' },
+            { key: nextIdx, src: imgs[nextIdx], className: 'next' },
+            { key: twoAfterIdx, src: imgs[twoAfterIdx], className: 'hidden after' },
+        ];
+
+        return imagesToRender.map(({ key, src, className }) => (
+            <img key={key} src={src} className={`carousel-img ${className}`} />
+        ));
+    };
+
+    return (
+        <div className="carousel">
+            {renderImages()}
+        </div>
+    );
+}
