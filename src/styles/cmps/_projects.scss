@@ -1,0 +1,40 @@
+.projects {
+    padding-inline: var(--padding-inline);
+
+    h1 {
+        margin-block-end: 5rem;
+        color: $font-clr2;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+
+        @include for-mobile-layout {
+            font-size: 4rem;
+        }
+
+        @include for-table-layout {
+            font-size: 5.2rem;
+            line-height: 5.5rem;
+        }
+
+        @include for-narrow-layout {
+            line-height: 6rem;
+            font-size: 6.4rem;
+        }
+
+        @include for-wide-layout {
+            margin-block-end: 8rem;
+            line-height: 7rem;
+            font-size: 7.5rem;
+        }
+
+        @include for-desktop-layout {
+            line-height: 9rem;
+            font-size: 9.2rem;
+        }
+
+        @include for-full-layout {
+            line-height: 10rem;
+            font-size: 10.8rem;
+        }
+    }
+}
