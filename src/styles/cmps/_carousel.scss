@@ -99,7 +99,14 @@
             &.after {
                 opacity: 0;
                 transform: translatex(250%);
-                animation: fadeInAfter 2.5s forwards;
+
+                @include for-table-layout {
+
+                    animation: fadeInAfter 2.5s forwards;
+                }
+
+                animation: fadeInAfter 0s forwards;
+
 
                 @keyframes fadeInAfter {
                     to {
