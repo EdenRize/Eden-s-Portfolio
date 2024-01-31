@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Image } from "./Image";
 
 export function Carousel({ imgs }) {
     const [currentImage, setCurrentImage] = useState(0);
@@ -32,7 +33,7 @@ export function Carousel({ imgs }) {
         ];
 
         return imagesToRender.map(({ key, src, className }) => (
-            <img key={key} src={src} className={`carousel-img ${className}`} />
+            <Image key={key} src={src} classes={`carousel-img ${className}`} />
         ));
     };
 

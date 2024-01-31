@@ -1,3 +1,5 @@
+import { Image } from "./Image"
+
 export function Contact() {
 
     const linksInfo = [
@@ -29,7 +31,7 @@ export function Contact() {
 
                 <a className="resume-link" href="/files/Eden_Rize-Resume.pdf" download="Eden Rize - Resume.pdf" >
                     <button className="flex align-center resume">
-                        <img src="/img/pdf.svg" />
+                        <Image src="/img/pdf.svg" />
                         <p className="font-Gilmer-Bold">Download Resume</p>
                     </button>
                 </a>
@@ -38,7 +40,7 @@ export function Contact() {
             <div className="flex align-center space-between links-container">
                 {linksInfo.map((link, idx) => {
                     return <a className="flex align-center justify-center social-link" key={idx} href={link.link} target="_blank">
-                        <img src={link.imgUrl} />
+                        <Image src={link.imgUrl} />
                     </a>
                 })}
             </div>

@@ -1,5 +1,6 @@
 .hero {
-    padding-top: 5rem;
+    padding-top: 3rem;
+    margin-bottom: 5rem;
     padding-inline: var(--padding-inline);
 
     @include for-table-layout {
@@ -105,17 +106,16 @@
 
 
         p {
-            font-size: .75rem;
+            font-size: 1rem;
             line-height: 1.25rem;
             color: $font-clr3;
-            margin-block-end: 1.5rem;
+            margin-block-end: 3.5rem;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
 
             @include for-table-layout {
                 font-size: .875rem;
                 line-height: 1.25rem;
-                margin-block-end: unset;
             }
 
             @include for-wide-layout {

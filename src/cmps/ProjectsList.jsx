@@ -1,3 +1,5 @@
+import { Image } from "./Image"
+
 export function ProjectsList() {
     const projects = [
         {
@@ -13,7 +15,7 @@ export function ProjectsList() {
             {projects.map((project, idx) => {
                 return <li className={`flex ${(idx + 1) % 2 === 0 && 'reverse'} project`} key={idx}>
                     <div className="proj-img-container">
-                        <img src={project.imgUrl} />
+                        <Image src={project.imgUrl} />
                     </div>
 
                     <div className="info-container">
@@ -21,11 +23,11 @@ export function ProjectsList() {
                         <p className="font-Gilmer-Light description">{project.description}</p>
                         <div className="flex align-center github-container">
                             <a className="github" target="_blank" href={project.gitLink}>
-                                <img src="/img/github-light.svg" />
+                                <Image src="/img/github-light.svg" />
                             </a>
 
                             <a className="arrow" target="_blank" href={project.gitLink}>
-                                <img src="/img/arrow-right.svg" />
+                                <Image src="/img/arrow-right.svg" />
                             </a>
                         </div>
                     </div>

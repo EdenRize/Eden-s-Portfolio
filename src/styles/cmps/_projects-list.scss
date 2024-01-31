@@ -3,7 +3,7 @@
     .project {
         flex-direction: column;
         text-wrap: wrap;
-        margin-block-start: 8rem;
+        margin-block-start: 5rem;
 
         @include for-table-layout {
             margin-block-start: 10rem;
