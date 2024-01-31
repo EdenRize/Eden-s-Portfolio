@@ -5,13 +5,13 @@ export function ProjectsList() {
             imgUrl: '../public/img/myday.svg',
             description: 'Myday streamlines collaboration and task organization, offering an intuitive project management platform akin to \'Monday\'.',
             gitLink: 'https://github.com/EdenRize/Myday-frontend'
-        }
+        },
     ]
 
     return (
         <ul className="clean-list projects-list">
-            {projects.map(project => {
-                return <li className="flex project" key={project.title}>
+            {projects.map((project, idx) => {
+                return <li className={`flex ${(idx + 1) % 2 === 0 && 'reverse'} project`} key={idx}>
                     <div className="proj-img-container">
                         <img src={project.imgUrl} />
                     </div>

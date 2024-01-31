@@ -3,11 +3,34 @@
     .project {
         flex-direction: column;
         text-wrap: wrap;
+        margin-block-start: 8rem;
+
+        @include for-table-layout {
+            margin-block-start: 10rem;
+
+        }
+
+        @include for-desktop-layout {
+            margin-block-start: 12rem;
+        }
 
         @include for-wide-layout {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+
+            &.reverse {
+                flex-direction: row-reverse;
+
+                .info-container {
+                    margin-inline-end: 8px;
+                    text-align: left;
+
+                    .github-container {
+                        justify-content: flex-start;
+                    }
+                }
+            }
         }
 
         .proj-img-container {
