@@ -36,13 +36,13 @@ export function Hero() {
                 </p>
 
                 <div className="flex align-center justify-center img-container">
-                    <img src="../public/img/girl-code.png" />
+                    <img src="/img/girl-code.png" />
                 </div>
             </div>
 
             <div className="flex space-between align-center socials-container">
                 {socials.map(social => {
-                    return <SocialLink key={social.name} name={social.name} imgUrl={`../public/img/${social.name}.svg`} link={social.link} />
+                    return <SocialLink key={social.name} name={social.name} imgUrl={`/img/${social.name}.svg`} link={social.link} />
                 })}
 
             </div>

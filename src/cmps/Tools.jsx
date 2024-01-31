@@ -2,22 +2,22 @@ import { Carousel } from "./Carousel";
 
 export function Tools() {
     const toolsImgs = [
-        '../public/img/react.svg',
-        '../public/img/vue.svg',
-        '../public/img/node.svg',
-        '../public/img/tailwind.svg',
-        '../public/img/css.svg',
-        '../public/img/js.svg',
-        '../public/img/mongo.svg',
-        '../public/img/express.svg',
-        '../public/img/babel.svg',
-        '../public/img/postman.svg',
-        '../public/img/quasar.svg',
-        '../public/img/redux.svg',
-        '../public/img/sass.svg',
-        '../public/img/sql.svg',
-        '../public/img/typescript.svg',
-        '../public/img/figma.svg',
+        '/img/react.svg',
+        '/img/vue.svg',
+        '/img/node.svg',
+        '/img/tailwind.svg',
+        '/img/css.svg',
+        '/img/js.svg',
+        '/img/mongo.svg',
+        '/img/express.svg',
+        '/img/babel.svg',
+        '/img/postman.svg',
+        '/img/quasar.svg',
+        '/img/redux.svg',
+        '/img/sass.svg',
+        '/img/sql.svg',
+        '/img/typescript.svg',
+        '/img/figma.svg',
     ]
 
     return (

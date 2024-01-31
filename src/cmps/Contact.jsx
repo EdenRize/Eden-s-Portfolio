@@ -2,15 +2,15 @@ export function Contact() {
 
     const linksInfo = [
         {
-            imgUrl: '../public/img/github-light.svg',
+            imgUrl: '/img/github-light.svg',
             link: 'https://github.com/EdenRize'
         },
         {
-            imgUrl: '../public/img/linkedin-light.svg',
+            imgUrl: '/img/linkedin-light.svg',
             link: 'https://www.linkedin.com/in/eden-rize-9476541b7/'
         },
         {
-            imgUrl: '../public/img/facebook.svg',
+            imgUrl: '/img/facebook.svg',
             link: 'https://www.facebook.com/profile.php?id=100006550717856'
         },
 
@@ -27,9 +27,9 @@ export function Contact() {
                     on <a href="https://www.instagram.com/edenrize/" target="_blank">Instagram</a>. Contact me !
                 </p>
 
-                <a className="resume-link" href="../public/files/Eden_Rize-Resume.pdf" download="Eden Rize - Resume.pdf" >
+                <a className="resume-link" href="/files/Eden_Rize-Resume.pdf" download="Eden Rize - Resume.pdf" >
                     <button className="flex align-center resume">
-                        <img src="../public/img/pdf.svg" />
+                        <img src="/img/pdf.svg" />
                         <p className="font-Gilmer-Bold">Download Resume</p>
                     </button>
                 </a>
