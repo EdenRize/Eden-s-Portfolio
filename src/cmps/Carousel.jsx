@@ -24,11 +24,11 @@ export function Carousel({ imgs }) {
         const twoAfterIdx = getTwoAfterIdx(currentIdx);
 
         const imagesToRender = [
-            { key: twoBeforeIdx, src: imgs[twoBeforeIdx], className: 'hidden before' },
+            { key: twoBeforeIdx, src: imgs[twoBeforeIdx], className: 'semi-hidden before' },
             { key: prevIdx, src: imgs[prevIdx], className: 'prev' },
             { key: currentIdx, src: imgs[currentIdx], className: 'current' },
             { key: nextIdx, src: imgs[nextIdx], className: 'next' },
-            { key: twoAfterIdx, src: imgs[twoAfterIdx], className: 'hidden after' },
+            { key: twoAfterIdx, src: imgs[twoAfterIdx], className: 'semi-hidden after' },
         ];
 
         return imagesToRender.map(({ key, src, className }) => (
