@@ -6,7 +6,7 @@ export function Hero() {
     const socials = [
         {
             name: 'gmail',
-            link: 'https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMGPbKrKVCpxsJttZzHLWSmwfkSRwpnQqwRzVHMqwFbdqzZpjcjnwVFvqJFWRRbhnrLSGW'
+            link: 'mailto:edenrize@gmail.com'
         },
         {
             name: 'github',
