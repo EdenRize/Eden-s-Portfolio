@@ -7,7 +7,7 @@ export function ProjectsList() {
             imgUrl: '/img/myday.svg',
             description: 'Myday streamlines collaboration and task organization, offering an intuitive project management platform akin to \'Monday\'.',
             gitLink: 'https://github.com/EdenRize/Myday-frontend',
-            website: 'https://myday-p034.onrender.com/'
+            website: 'https://github.com/EdenRize/Myday-frontend'
         },
         {
             title: 'ZIVIZ',
