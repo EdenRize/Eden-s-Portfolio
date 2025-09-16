@@ -1,14 +1,18 @@
 .hero {
-    padding-top: 3rem;
-    margin-bottom: 5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     padding-inline: var(--padding-inline);
 
     @include for-table-layout {
-        padding-top: 12rem;
+        padding-top: 3rem;
     }
 
     .header-container {
-        margin-block: 2.5rem 2rem;
+        margin-block: 1rem 1rem;
 
         h1,
         h2 {
@@ -109,7 +113,7 @@
             font-size: 1rem;
             line-height: 1.25rem;
             color: $font-clr3;
-            margin-block-end: 3.5rem;
+            margin-block-end: 1rem;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
 
@@ -140,18 +144,18 @@
             width: 1px;
             height: 1px;
             border-radius: 50%;
-            margin-block: 90px;
+            margin-block: 2rem;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
 
             @include for-table-layout {
-                margin-block: 135px;
+                margin-block: 3rem;
                 width: 70px;
                 height: 70px;
             }
 
             @include for-narrow-layout {
-                margin-block: 110px;
+                margin-block: 2rem;
                 margin-inline: 150px 80px;
             }
 
@@ -194,7 +198,7 @@
     }
 
     .socials-container {
-        margin-block: 3.5rem;
+        margin-block: 1rem;
     }
 }
 
