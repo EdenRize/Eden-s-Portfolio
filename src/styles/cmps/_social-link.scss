@@ -2,15 +2,15 @@
     .icon-container {
         background-color: $font-clr2;
         border-radius: 50%;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         transition: .2s;
         transform: scale(0, 0);
         animation: scaleIn 0.5s ease-out .3s forwards;
 
         @include for-mobile-layout {
-            width: 4.4rem;
-            height: 4.4rem;
+            width: 3rem;
+            height: 3rem;
         }
 
         @include for-table-layout {
@@ -75,14 +75,14 @@
         .img-container {
             background-color: $font-clr4;
             border-radius: 50%;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 1.8rem;
+            height: 1.8rem;
             transform: scale(0, 0);
             animation: scaleIn .5s ease-out .8s forwards;
 
             @include for-mobile-layout {
-                width: 3.4rem;
-                height: 3.4rem;
+                width: 2.2rem;
+                height: 2.2rem;
             }
 
             @include for-narrow-layout {
@@ -106,12 +106,17 @@
             }
 
             img {
-                width: 27px;
-                height: 27px;
+                width: 18px;
+                height: 18px;
                 transition: .2s;
                 opacity: 0;
 
                 animation: fadeIn 0.5s ease-out 1.3s forwards;
+
+                @include for-mobile-layout {
+                    width: 22px;
+                    height: 22px;
+                }
 
                 @include for-table-layout {
                     width: 41px;

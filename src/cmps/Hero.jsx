@@ -21,32 +21,67 @@ export function Hero() {
     <div className="hero">
       <InteractiveAvatar />
 
-      <div className="header-container">
-        <h1 className="font-Gilmer-Outline">
-          <span className="span-1">Hello!</span>{" "}
-          <span className="span-2">I'm</span>{" "}
-          <span className="span-3">Eden</span>
-        </h1>
-        <h2 className="font-Gilmer-Bold">
-          <span className="span-4">I</span>{" "}
-          <span className="span-5">develope</span>{" "}
-          <span className="span-6">Creative</span>{" "}
-          <span className="span-7">&</span>{" "}
-          <span className="span-8">Interactive</span>{" "}
-          <span className="span-9">webapps</span>{" "}
-          <span className="span-10">🚀</span>
-        </h2>
-      </div>
-
-      <div className="flex space-between content-container">
-        <p className="font-Gilmer-Light pre-line">
-          {`I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
-          I leverage modern technologies—including ReactJS, Vue, and NodeJS—to develop high-quality, dynamic web applications.
-          My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.`}
-        </p>
+      {/* Mobile layout - grouped together */}
+      <div className="mobile-layout">
+        <div className="text-content">
+          <div className="header-container">
+            <h1 className="font-Gilmer-Outline">
+              <span className="span-1">Hello!</span>{" "}
+              <span className="span-2">I'm</span>{" "}
+              <span className="span-3">Eden</span>
+            </h1>
+            <h2 className="font-Gilmer-Bold">
+              <span className="span-4">I</span>{" "}
+              <span className="span-5">develope</span>{" "}
+              <span className="span-6">Creative</span>{" "}
+              <span className="span-7">&</span>{" "}
+              <span className="span-8">Interactive</span>{" "}
+              <span className="span-9">webapps</span>{" "}
+              <span className="span-10">🚀</span>
+            </h2>
+          </div>
+          
+          <p className="font-Gilmer-Light pre-line">
+            {`I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
+            I leverage modern technologies—including ReactJS, Vue, and NodeJS—to develop high-quality, dynamic web applications.
+            My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.`}
+          </p>
+        </div>
 
         <div className="flex align-center justify-center img-container">
           <img src="/img/girl-code.png" />
+        </div>
+      </div>
+
+      {/* Desktop layout - separated like before */}
+      <div className="desktop-layout">
+        <div className="header-container">
+          <h1 className="font-Gilmer-Outline">
+            <span className="span-1">Hello!</span>{" "}
+            <span className="span-2">I'm</span>{" "}
+            <span className="span-3">Eden</span>
+          </h1>
+          <h2 className="font-Gilmer-Bold">
+            <span className="span-4">I</span>{" "}
+            <span className="span-5">develope</span>{" "}
+            <span className="span-6">Creative</span>{" "}
+            <span className="span-7">&</span>{" "}
+            <span className="span-8">Interactive</span>{" "}
+            <span className="span-9">webapps</span>{" "}
+            <span className="span-10">🚀</span>
+          </h2>
+        </div>
+
+        <div className="flex space-between content-container">
+          <p className="font-Gilmer-Light pre-line">
+            {`I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
+            I leverage modern technologies—including ReactJS, Vue, and NodeJS—to develop high-quality, dynamic web applications.
+            My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.`}
+          </p>
+
+          <div className="flex align-center justify-center img-container">
+            <img src="/img/girl-code.png" />
+          </div>
         </div>
       </div>
 

@@ -1,18 +1,39 @@
 .hero {
-    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-inline: var(--padding-inline);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-inline: 1rem;
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    @include for-mobile-layout {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-inline: 1.5rem;
+    }
+
+    @include for-narrow-layout {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-inline: var(--padding-inline);
+    }
 
     @include for-table-layout {
         padding-top: 3rem;
     }
 
     .header-container {
-        margin-block: 1rem 1rem;
+        margin-block: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
 
         h1,
         h2 {
@@ -33,70 +54,133 @@
 
         h1 {
             line-height: 40px;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: $font-clr2;
 
             @include for-mobile-layout {
-                line-height: 60px;
-                font-size: 2.3rem;
-            }
-
-            @include for-table-layout {
-                line-height: 80px;
-                font-size: 3rem;
-            }
-
-            @include for-narrow-layout {
-                font-size: 3.5rem;
-            }
-
-            @include for-wide-layout {
-                line-height: 100px;
-                font-size: 5rem;
-            }
-
-            @include for-desktop-layout {
-                line-height: 120px;
-                font-size: 6.2rem;
-            }
-
-            @include for-full-layout {
-                font-size: 6.5rem;
-            }
-        }
-
-        h2 {
-            line-height: 33px;
-            font-size: 1.4rem;
-            color: $font-clr1;
-
-            @include for-mobile-layout {
-                font-size: 1.5rem;
-            }
-
-            @include for-table-layout {
                 line-height: 50px;
                 font-size: 2.2rem;
             }
 
+            @include for-table-layout {
+                line-height: 55px;
+                font-size: 2.2rem;
+            }
+
             @include for-narrow-layout {
-                line-height: 70px;
-                font-size: 2.6rem;
+                font-size: 2.8rem;
             }
 
             @include for-wide-layout {
-                line-height: 100px;
+                line-height: 75px;
                 font-size: 3.5rem;
             }
 
             @include for-desktop-layout {
-                font-size: 5rem;
+                line-height: 90px;
+                font-size: 4.5rem;
             }
 
             @include for-full-layout {
-                line-height: 120px;
-                font-size: 5.5rem;
+                font-size: 5rem;
             }
+        }
+
+        h2 {
+            line-height: 26px;
+            font-size: 1.2rem;
+            color: $font-clr1;
+
+            @include for-mobile-layout {
+                line-height: 32px;
+                font-size: 1.5rem;
+            }
+
+            @include for-table-layout {
+                line-height: 35px;
+                font-size: 1.6rem;
+            }
+
+            @include for-narrow-layout {
+                line-height: 45px;
+                font-size: 2rem;
+            }
+
+            @include for-wide-layout {
+                line-height: 65px;
+                font-size: 2.5rem;
+            }
+
+            @include for-desktop-layout {
+                font-size: 3.5rem;
+            }
+
+            @include for-full-layout {
+                line-height: 85px;
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .mobile-layout {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        @include for-narrow-layout {
+            display: none;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            p {
+                font-size: 0.95rem;
+                line-height: 1.4rem;
+                color: $font-clr3;
+                margin: 0;
+                opacity: 0;
+                animation: fadeIn 1s ease-out forwards;
+
+                @include for-mobile-layout {
+                    font-size: 1.05rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+
+        .img-container {
+            align-self: center;
+            margin-block: auto;
+
+            img {
+                width: 120px;
+                height: 120px;
+                animation: colorLoop 4s infinite alternate;
+
+                @include for-mobile-layout {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                @include for-table-layout {
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    .desktop-layout {
+        display: none;
+
+        @include for-narrow-layout {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
     }
 
@@ -108,17 +192,21 @@
             flex-direction: row;
         }
 
-
         p {
-            font-size: 1rem;
-            line-height: 1.25rem;
+            font-size: 0.8rem;
+            line-height: 1.1rem;
             color: $font-clr3;
             margin-block-end: 1rem;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
 
+            @include for-mobile-layout {
+                font-size: 0.85rem;
+                line-height: 1.15rem;
+            }
+
             @include for-table-layout {
-                font-size: .875rem;
+                font-size: 0.875rem;
                 line-height: 1.25rem;
             }
 
@@ -135,7 +223,6 @@
             @include for-full-layout {
                 font-size: 1.5rem;
                 line-height: 2.25rem;
-
             }
         }
 
