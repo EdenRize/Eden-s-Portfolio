@@ -3,15 +3,15 @@
     .project {
         flex-direction: column;
         text-wrap: wrap;
-        margin-block-start: 5rem;
+        margin-block-start: 3rem;
 
         @include for-table-layout {
-            margin-block-start: 10rem;
+            margin-block-start: 5rem;
 
         }
 
         @include for-desktop-layout {
-            margin-block-start: 12rem;
+            margin-block-start: 7rem;
         }
 
         @include for-wide-layout {
