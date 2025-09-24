@@ -19,7 +19,7 @@ export function Contact() {
     ]
 
     return (
-        <div className="flex column space-between contact">
+        <div className="flex column space-between contact full-section">
             <div className="info-container">
                 <h1 className="font-Gilmer-Heavy">Interested?<br />
                     Let's Get In Touch!</h1>

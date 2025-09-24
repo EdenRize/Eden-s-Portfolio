@@ -1,6 +1,32 @@
+html {
+    overflow: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $main-clr;
     margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $font-clr2 $main-clr;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $main-clr;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $font-clr2;
+    border-radius: 4px;
 }
 
 h1,

@@ -1,54 +1,92 @@
-.projects-list {
+.projects-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    
+    @include for-table-layout {
+        justify-content: center;
+        gap: 2rem;
+    }
 
-    .project {
-        flex-direction: column;
-        text-wrap: wrap;
-        margin-block-start: 3rem;
-
-        @include for-table-layout {
-            margin-block-start: 5rem;
-
+    .nav-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+        
+        &:hover {
+            transform: scale(1.1);
         }
-
-        @include for-desktop-layout {
-            margin-block-start: 7rem;
-        }
-
-        @include for-wide-layout {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            &.reverse {
-                flex-direction: row-reverse;
-
-                .info-container {
-                    margin-inline-end: 8px;
-                    text-align: left;
-
-                    .github-container {
-                        justify-content: flex-start;
-                    }
-                }
+        
+        img {
+            width: 24px;
+            height: 24px;
+            
+            @include for-mobile-layout {
+                width: 28px;
+                height: 28px;
             }
+            
+            @include for-table-layout {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        flex: 1;
+        min-width: 0;
+        
+        @include for-table-layout {
+            flex-direction: row;
+            gap: 3rem;
+            flex: initial;
+            width: auto;
+        }
+        
+        @include for-wide-layout {
+            gap: 4rem;
         }
 
         .proj-img-container {
-            height: 250px;
+            width: 100%;
+            height: 160px;
+            max-width: 300px;
+            
+            @include for-mobile-layout {
+                height: 200px;
+                max-width: 350px;
+            }
 
             @include for-table-layout {
+                width: 400px;
                 height: 300px;
+                max-width: none;
             }
 
             @include for-narrow-layout {
+                width: 450px;
                 height: 350px;
             }
 
             @include for-wide-layout {
+                width: 500px;
                 height: 400px;
             }
 
             @include for-full-layout {
+                width: 600px;
                 height: 500px;
             }
 
@@ -67,9 +105,14 @@
         }
 
         .info-container {
-            @include for-wide-layout {
-                margin-inline-start: 8px;
-                text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+            @include for-table-layout {
+                align-items: flex-start;
+                text-align: left;
             }
 
             .title {
@@ -134,7 +177,6 @@
                 }
 
                 @include for-wide-layout {
-                    justify-content: flex-end;
                     margin-block-start: 16px;
                 }
 
@@ -182,6 +224,5 @@
                 }
             }
         }
-
     }
 }

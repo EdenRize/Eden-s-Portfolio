@@ -18,7 +18,7 @@ export function Hero() {
   ];
 
   return (
-    <div className="hero">
+    <div className="hero full-section">
       <InteractiveAvatar />
 
       {/* Mobile layout - grouped together */}

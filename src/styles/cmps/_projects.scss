@@ -1,26 +1,31 @@
 .projects {
-    padding-inline: var(--padding-inline);
-    padding-block-start: 5rem;
-    padding-block-end: 5rem;
+    padding: 3rem var(--padding-inline);
+    display: flex;
+    flex-direction: column;
+    
+    .projects-list-container {
+        flex: 1;
+        overflow: hidden;
+    }
 
     @include for-table-layout {
-        padding-block-start: 6rem;
+        padding: 4rem var(--padding-inline);
     }
 
     @include for-narrow-layout {
-        padding-block-start: 7rem;
+        padding: 5rem var(--padding-inline);
     }
 
     @include for-wide-layout {
-        padding-block-start: 8rem;
+        padding: 6rem var(--padding-inline);
     }
 
     @include for-desktop-layout {
-        padding-block-start: 10rem;
+        padding: 8rem var(--padding-inline);
     }
 
     h1 {
-        // margin-block-end: 5rem;
+        margin-block-end: 2rem;
         color: $font-clr2;
         font-size: 2.8rem;
         line-height: 2.8rem;

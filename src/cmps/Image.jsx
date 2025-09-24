@@ -1,13 +1,19 @@
 import { useEffect, useRef, useState } from "react"
 
-export function Image({ src, classes }) {
+export function Image({ src, classes, forceRender = false }) {
 
     const imageRef = useRef(null)
-    const [isRender, setIsRender] = useState(false)
+    const [isRender, setIsRender] = useState(forceRender)
 
     useEffect(() => {
+        if (forceRender) {
+            setIsRender(true);
+            return;
+        }
+        
+        let observer;
         const observerTimeout = setTimeout(() => {
-            const observer = new IntersectionObserver(
+            observer = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
                         setIsRender(true)
@@ -23,12 +29,13 @@ export function Image({ src, classes }) {
         }, 200);
 
         return () => {
-            if (imageRef.current) {
+            clearTimeout(observerTimeout);
+            if (observer && imageRef.current) {
                 observer.unobserve(imageRef.current);
-                clearTimeout(observerTimeout)
             }
         };
-    }, [src]);
+    }, [src, forceRender]);
+    
     if (!isRender) return <span className={`${classes} image-comp`} ref={imageRef}></span>
     return (
         <img className={` image-comp ${classes}`} ref={imageRef} src={src} />

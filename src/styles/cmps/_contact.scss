@@ -1,6 +1,8 @@
 .contact {
-    padding-block-end: 20px;
-    padding-inline: var(--padding-inline);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem var(--padding-inline);
 
     .info-container {
         margin-block-end: 90px;

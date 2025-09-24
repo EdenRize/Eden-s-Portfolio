@@ -1,5 +1,8 @@
 .tools {
-    margin-block-end: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem var(--padding-inline);
 
     h1 {
         padding-inline: 10px;
