@@ -40,10 +40,10 @@ export function Hero() {
               <span className="span-10">🚀</span>
             </h2>
           </div>
-          
+
           <p className="font-Gilmer-Light pre-line">
             {`I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
-            I leverage modern technologies—including ReactJS, Vue, and NodeJS—to develop high-quality, dynamic web applications.
+            I leverage modern technologies — including ReactJS, Vue, React Native and NodeJS — to develop high-quality, dynamic web applications.
             My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.`}
           </p>
         </div>
@@ -75,7 +75,7 @@ export function Hero() {
         <div className="flex space-between content-container">
           <p className="font-Gilmer-Light pre-line">
             {`I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
-            I leverage modern technologies—including ReactJS, Vue, and NodeJS—to develop high-quality, dynamic web applications.
+            I leverage modern technologies — including ReactJS, Vue, React Native and NodeJS — to develop high-quality, dynamic web applications.
             My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.`}
           </p>
 
