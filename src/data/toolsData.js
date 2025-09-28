@@ -1,0 +1,18 @@
+export const toolsData = [
+    { img: "/img/react.svg", name: "React" },
+    { img: "/img/vue.svg", name: "Vue.js" },
+    { img: "/img/node.svg", name: "Node.js" },
+    { img: "/img/tailwind.svg", name: "Tailwind CSS" },
+    { img: "/img/css.svg", name: "CSS3" },
+    { img: "/img/js.svg", name: "JavaScript" },
+    { img: "/img/mongo.svg", name: "MongoDB" },
+    { img: "/img/express.svg", name: "Express.js" },
+    { img: "/img/babel.svg", name: "Babel" },
+    { img: "/img/postman.svg", name: "Postman" },
+    { img: "/img/quasar.svg", name: "Quasar" },
+    { img: "/img/redux.svg", name: "Redux" },
+    { img: "/img/sass.svg", name: "Sass" },
+    { img: "/img/sql.svg", name: "SQL" },
+    { img: "/img/typescript.svg", name: "TypeScript" },
+    { img: "/img/figma.svg", name: "Figma" },
+];
