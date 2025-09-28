@@ -19,9 +19,13 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 10%;
+            width: 5%;
             pointer-events: none;
             z-index: 10;
+            
+            @include for-narrow-layout {
+                width: 10%;
+            }
         }
         
         &::before {
