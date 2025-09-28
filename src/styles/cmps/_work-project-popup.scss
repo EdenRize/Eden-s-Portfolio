@@ -1,0 +1,173 @@
+.work-project-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.work-project-popup {
+    background: $main-clr;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    
+    .close-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: $font-clr2;
+        z-index: 1;
+        
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+    }
+    
+    .popup-content {
+        padding: 3rem;
+        
+        @include for-mobile-layout {
+            padding: 2rem;
+        }
+        
+        .popup-header {
+            margin-bottom: 2rem;
+            
+            h2 {
+                color: $font-clr1;
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                
+                @include for-mobile-layout {
+                    font-size: 2rem;
+                }
+            }
+            
+            .subtitle {
+                color: $font-clr3;
+                font-size: 1.2rem;
+            }
+        }
+        
+        .description {
+            color: $font-clr2;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .technologies {
+            margin-bottom: 2rem;
+            
+            h3 {
+                color: $font-clr1;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tech-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                
+                .tech-tag {
+                    background: rgba(255, 255, 255, 0.1);
+                    color: $font-clr2;
+                    padding: 0.5rem 1rem;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.15);
+                        border-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+        }
+        
+        .media-section {
+            margin-bottom: 2rem;
+            
+            h3 {
+                color: $font-clr1;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+            
+            .images-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+                
+                img {
+                    width: 100%;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    cursor: zoom-in;
+                    transition: transform 0.3s ease;
+                    
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+            
+            .videos-list {
+                video {
+                    width: 100%;
+                    max-width: 600px;
+                    border-radius: 8px;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        
+        .project-link {
+            text-align: center;
+            margin-top: 2rem;
+            
+            a {
+                display: inline-block;
+                color: $font-clr1;
+                text-decoration: none;
+                padding: 1rem 2rem;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 30px;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: rgba(255, 255, 255, 0.3);
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}

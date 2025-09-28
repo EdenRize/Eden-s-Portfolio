@@ -1,0 +1,64 @@
+.work-project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+        
+        h3 {
+            color: $font-clr1;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            
+            @include for-narrow-layout {
+                font-size: 1.6rem;
+            }
+            
+            @include for-wide-layout {
+                font-size: 1.8rem;
+            }
+        }
+        
+        p {
+            color: $font-clr3;
+            font-size: 1rem;
+            
+            @include for-narrow-layout {
+                font-size: 1.1rem;
+            }
+            
+            @include for-wide-layout {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

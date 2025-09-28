@@ -4,9 +4,12 @@
     flex-direction: column;
     text-align: center;
     
-    .professional-work-content {
+    .carousel-container {
         flex: 1;
-        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
     @include for-table-layout {
