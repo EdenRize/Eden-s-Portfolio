@@ -1,0 +1,63 @@
+.professional-work {
+    padding: 2rem var(--padding-inline) 1rem var(--padding-inline);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    .professional-work-content {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    @include for-table-layout {
+        padding: 1rem var(--padding-inline) 4rem var(--padding-inline);
+    }
+
+    @include for-narrow-layout {
+        padding: 2rem var(--padding-inline) 5rem var(--padding-inline);
+    }
+
+    @include for-wide-layout {
+        padding: 2rem var(--padding-inline) 6rem var(--padding-inline);
+    }
+
+    @include for-desktop-layout {
+        padding: 3rem var(--padding-inline) 8rem var(--padding-inline);
+    }
+
+    h1 {
+        margin-block-end: 2rem;
+        color: $font-clr2;
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+
+        @include for-mobile-layout {
+            font-size: 3.2rem;
+        }
+
+        @include for-table-layout {
+            font-size: 4.2rem;
+            line-height: 4.4rem;
+        }
+
+        @include for-narrow-layout {
+            line-height: 4.8rem;
+            font-size: 5.1rem;
+        }
+
+        @include for-wide-layout {
+            line-height: 5.6rem;
+            font-size: 6rem;
+        }
+
+        @include for-desktop-layout {
+            line-height: 7.2rem;
+            font-size: 7.4rem;
+        }
+
+        @include for-full-layout {
+            line-height: 8rem;
+            font-size: 8.6rem;
+        }
+    }
+}
