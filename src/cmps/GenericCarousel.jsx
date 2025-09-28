@@ -10,7 +10,7 @@ export function GenericCarousel({ children, isPaused = false }) {
         
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
-        }, 3000); // Slower for work projects
+        }, 4000); // Slower rotation for work projects
 
         return () => clearInterval(interval);
     }, [itemCount, isPaused]);
