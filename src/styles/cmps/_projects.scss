@@ -1,7 +1,8 @@
 .projects {
-    padding: 3rem var(--padding-inline);
+    padding: 2rem var(--padding-inline) 1rem var(--padding-inline);
     display: flex;
     flex-direction: column;
+    text-align: center;
     
     .projects-list-container {
         flex: 1;
@@ -9,19 +10,19 @@
     }
 
     @include for-table-layout {
-        padding: 4rem var(--padding-inline);
+        padding: 1rem var(--padding-inline) 4rem var(--padding-inline);
     }
 
     @include for-narrow-layout {
-        padding: 5rem var(--padding-inline);
+        padding: 2rem var(--padding-inline) 5rem var(--padding-inline);
     }
 
     @include for-wide-layout {
-        padding: 6rem var(--padding-inline);
+        padding: 2rem var(--padding-inline) 6rem var(--padding-inline);
     }
 
     @include for-desktop-layout {
-        padding: 8rem var(--padding-inline);
+        padding: 3rem var(--padding-inline) 8rem var(--padding-inline);
     }
 
     h1 {

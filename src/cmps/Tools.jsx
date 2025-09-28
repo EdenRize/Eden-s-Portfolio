@@ -23,7 +23,9 @@ export function Tools() {
     return (
         <div className="tools full-section">
             <h1 className="font-Gilmer-Outline">Languages, Frameworks & Tools</h1>
-            <Carousel imgs={toolsImgs} />
+            <div className="carousel-container">
+                <Carousel imgs={toolsImgs} />
+            </div>
         </div>
     )
 }

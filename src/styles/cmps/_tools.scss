@@ -1,8 +1,30 @@
 .tools {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 3rem var(--padding-inline);
+    padding: 2rem var(--padding-inline) 1rem var(--padding-inline);
+
+    .carousel-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include for-table-layout {
+        padding: 1rem var(--padding-inline) 4rem var(--padding-inline);
+    }
+
+    @include for-narrow-layout {
+        padding: 2rem var(--padding-inline) 5rem var(--padding-inline);
+    }
+
+    @include for-wide-layout {
+        padding: 2rem var(--padding-inline) 6rem var(--padding-inline);
+    }
+
+    @include for-desktop-layout {
+        padding: 3rem var(--padding-inline) 8rem var(--padding-inline);
+    }
 
     h1 {
         padding-inline: 10px;
