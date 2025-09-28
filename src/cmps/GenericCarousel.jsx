@@ -1,19 +1,56 @@
-import { useEffect, useState, Children } from "react";
+import { useEffect, useState, useRef, Children } from "react";
 
 export function GenericCarousel({ children, isPaused = false }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+    const [isDocumentVisible, setIsDocumentVisible] = useState(true);
+    const carouselRef = useRef(null);
     const items = Children.toArray(children);
     const itemCount = items.length;
 
+    // Handle document visibility
     useEffect(() => {
-        if (itemCount <= 1 || isPaused) return;
+        const handleVisibilityChange = () => {
+            setIsDocumentVisible(!document.hidden);
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
+
+    // Handle intersection observer for viewport visibility
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        if (carouselRef.current) {
+            observer.observe(carouselRef.current);
+        }
+
+        return () => {
+            if (carouselRef.current) {
+                observer.unobserve(carouselRef.current);
+            }
+        };
+    }, []);
+
+    // Handle carousel rotation
+    useEffect(() => {
+        if (itemCount <= 1 || isPaused || !isVisible || !isDocumentVisible) return;
         
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
         }, 4000); // Slower rotation for work projects
 
         return () => clearInterval(interval);
-    }, [itemCount, isPaused]);
+    }, [itemCount, isPaused, isVisible, isDocumentVisible]);
 
     if (itemCount === 0) return null;
     if (itemCount === 1) {
@@ -52,7 +89,7 @@ export function GenericCarousel({ children, isPaused = false }) {
     };
 
     return (
-        <div className="generic-carousel">
+        <div ref={carouselRef} className="generic-carousel">
             {renderItems()}
         </div>
     );
