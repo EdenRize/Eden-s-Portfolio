@@ -4,9 +4,20 @@ export function GenericCarousel({ children, isPaused = false }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
     const [isDocumentVisible, setIsDocumentVisible] = useState(true);
+    const [lastInteraction, setLastInteraction] = useState(0);
     const carouselRef = useRef(null);
     const items = Children.toArray(children);
     const itemCount = items.length;
+
+    const goToPrevious = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + itemCount) % itemCount);
+        setLastInteraction(Date.now());
+    };
+
+    const goToNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
+        setLastInteraction(Date.now());
+    };
 
     // Handle document visibility
     useEffect(() => {
@@ -46,11 +57,15 @@ export function GenericCarousel({ children, isPaused = false }) {
         if (itemCount <= 1 || isPaused || !isVisible || !isDocumentVisible) return;
         
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
+            const timeSinceLastInteraction = Date.now() - lastInteraction;
+            // Only auto-advance if no recent manual interaction (within 4 seconds)
+            if (timeSinceLastInteraction > 4000 || lastInteraction === 0) {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
+            }
         }, 4000); // Slower rotation for work projects
 
         return () => clearInterval(interval);
-    }, [itemCount, isPaused, isVisible, isDocumentVisible]);
+    }, [itemCount, isPaused, isVisible, isDocumentVisible, lastInteraction]);
 
     if (itemCount === 0) return null;
     if (itemCount === 1) {
@@ -91,6 +106,24 @@ export function GenericCarousel({ children, isPaused = false }) {
     return (
         <div ref={carouselRef} className="generic-carousel">
             {renderItems()}
+            <button 
+                className="carousel-nav carousel-nav-prev" 
+                onClick={goToPrevious}
+                aria-label="Previous item"
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button 
+                className="carousel-nav carousel-nav-next" 
+                onClick={goToNext}
+                aria-label="Next item"
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
         </div>
     );
 }
