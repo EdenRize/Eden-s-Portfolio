@@ -1,16 +1,55 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Image } from "./Image";
 
 export function Carousel({ imgs }) {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isDocumentVisible, setIsDocumentVisible] = useState(true);
+  const carouselRef = useRef(null);
 
+  // Handle document visibility
   useEffect(() => {
+    const handleVisibilityChange = () => {
+      setIsDocumentVisible(!document.hidden);
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Handle intersection observer for viewport visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (carouselRef.current) {
+      observer.observe(carouselRef.current);
+    }
+
+    return () => {
+      if (carouselRef.current) {
+        observer.unobserve(carouselRef.current);
+      }
+    };
+  }, []);
+
+  // Handle carousel rotation
+  useEffect(() => {
+    if (!isVisible || !isDocumentVisible) return;
+    
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % imgs.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isVisible, isDocumentVisible, imgs.length]);
 
   const getPrevIdx = (idx) => (idx - 1 + imgs.length) % imgs.length;
   const getNextIdx = (idx) => (idx + 1) % imgs.length;
@@ -45,5 +84,5 @@ export function Carousel({ imgs }) {
     ));
   };
 
-  return <div className="carousel">{renderImages()}</div>;
+  return <div ref={carouselRef} className="carousel">{renderImages()}</div>;
 }
