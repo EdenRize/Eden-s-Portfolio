@@ -1,75 +1,85 @@
 export const workProjects = [
-    {
-        id: 'project1',
-        title: 'E-Commerce Platform',
-        subtitle: 'Full-Stack Development',
-        image: 'https://via.placeholder.com/400x300/1a1a2e/eee?text=E-Commerce',
-        description: 'Developed a comprehensive e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard. Implemented microservices architecture for scalability.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Redis', 'Docker', 'AWS'],
-        images: [
-            'https://via.placeholder.com/800x600/1a1a2e/eee?text=Dashboard',
-            'https://via.placeholder.com/800x600/1a1a2e/eee?text=Product+Page',
-            'https://via.placeholder.com/800x600/1a1a2e/eee?text=Checkout'
-        ],
-        videos: [],
-        link: 'https://example.com/project1'
-    },
-    {
-        id: 'project2',
-        title: 'Healthcare Management System',
-        subtitle: 'Enterprise Solution',
-        image: 'https://via.placeholder.com/400x300/16213e/eee?text=Healthcare',
-        description: 'Built a HIPAA-compliant healthcare management system with appointment scheduling, patient records management, and telemedicine capabilities. Integrated with multiple third-party APIs.',
-        technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL', 'Kubernetes', 'Azure'],
-        images: [
-            'https://via.placeholder.com/800x600/16213e/eee?text=Patient+Portal',
-            'https://via.placeholder.com/800x600/16213e/eee?text=Admin+Dashboard'
-        ],
-        videos: ['https://www.example.com/demo-video.mp4'],
-        link: null
-    },
-    {
-        id: 'project3',
-        title: 'Financial Analytics Platform',
-        subtitle: 'Data Visualization',
-        image: 'https://via.placeholder.com/400x300/0f3460/eee?text=Analytics',
-        description: 'Created a real-time financial analytics platform with advanced data visualization, predictive modeling, and automated reporting features. Processed millions of transactions daily.',
-        technologies: ['Angular', 'Java', 'Spring Boot', 'Apache Kafka', 'Elasticsearch', 'D3.js'],
-        images: [
-            'https://via.placeholder.com/800x600/0f3460/eee?text=Analytics+Dashboard',
-            'https://via.placeholder.com/800x600/0f3460/eee?text=Reports',
-            'https://via.placeholder.com/800x600/0f3460/eee?text=Predictions'
-        ],
-        videos: [],
-        link: 'https://example.com/project3'
-    },
-    {
-        id: 'project4',
-        title: 'Social Media Management Tool',
-        subtitle: 'SaaS Product',
-        image: 'https://via.placeholder.com/400x300/533483/eee?text=Social+Media',
-        description: 'Developed a comprehensive social media management platform supporting multiple networks, content scheduling, analytics, and team collaboration features.',
-        technologies: ['React', 'GraphQL', 'Node.js', 'MySQL', 'Redis', 'WebSockets'],
-        images: [
-            'https://via.placeholder.com/800x600/533483/eee?text=Post+Scheduler',
-            'https://via.placeholder.com/800x600/533483/eee?text=Analytics'
-        ],
-        videos: [],
-        link: null
-    },
-    {
-        id: 'project5',
-        title: 'IoT Smart Home Platform',
-        subtitle: 'IoT Integration',
-        image: 'https://via.placeholder.com/400x300/3d5a80/eee?text=Smart+Home',
-        description: 'Built a smart home automation platform with support for various IoT devices, voice control, and machine learning for predictive automation.',
-        technologies: ['React Native', 'Python', 'MQTT', 'TensorFlow', 'RaspberryPi', 'AWS IoT'],
-        images: [
-            'https://via.placeholder.com/800x600/3d5a80/eee?text=Mobile+App',
-            'https://via.placeholder.com/800x600/3d5a80/eee?text=Device+Control',
-            'https://via.placeholder.com/800x600/3d5a80/eee?text=Automation+Rules'
-        ],
-        videos: ['https://www.example.com/iot-demo.mp4'],
-        link: 'https://example.com/project5'
-    }
+  {
+    id: "togethering",
+    title: "Togethering",
+    subtitle: "Frontend Development",
+    image: "https://via.placeholder.com/400x300/1a1a2e/eee?text=E-Commerce",
+    description:
+      "Developed a comprehensive e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard. Implemented microservices architecture for scalability.",
+    technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker", "AWS"],
+    images: [
+      "https://via.placeholder.com/800x600/1a1a2e/eee?text=Dashboard",
+      "https://via.placeholder.com/800x600/1a1a2e/eee?text=Product+Page",
+      "https://via.placeholder.com/800x600/1a1a2e/eee?text=Checkout",
+    ],
+    videos: [],
+    link: "https://example.com/project1",
+  },
+  {
+    id: "project2",
+    title: "Healthcare Management System",
+    subtitle: "Enterprise Solution",
+    image: "https://via.placeholder.com/400x300/16213e/eee?text=Healthcare",
+    description:
+      "Built a HIPAA-compliant healthcare management system with appointment scheduling, patient records management, and telemedicine capabilities. Integrated with multiple third-party APIs.",
+    technologies: [
+      "Vue.js",
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Kubernetes",
+      "Azure",
+    ],
+    images: [
+      "https://via.placeholder.com/800x600/16213e/eee?text=Patient+Portal",
+      "https://via.placeholder.com/800x600/16213e/eee?text=Admin+Dashboard",
+    ],
+    videos: ["https://www.example.com/demo-video.mp4"],
+    link: null,
+  },
+  {
+    id: "project3",
+    title: "Financial Analytics Platform",
+    subtitle: "Data Visualization",
+    image: "https://via.placeholder.com/400x300/0f3460/eee?text=Analytics",
+    description:
+      "Created a real-time financial analytics platform with advanced data visualization, predictive modeling, and automated reporting features. Processed millions of transactions daily.",
+    technologies: [
+      "Angular",
+      "Java",
+      "Spring Boot",
+      "Apache Kafka",
+      "Elasticsearch",
+      "D3.js",
+    ],
+    images: [
+      "https://via.placeholder.com/800x600/0f3460/eee?text=Analytics+Dashboard",
+      "https://via.placeholder.com/800x600/0f3460/eee?text=Reports",
+      "https://via.placeholder.com/800x600/0f3460/eee?text=Predictions",
+    ],
+    videos: [],
+    link: "https://example.com/project3",
+  },
+  {
+    id: "project4",
+    title: "Social Media Management Tool",
+    subtitle: "SaaS Product",
+    image: "https://via.placeholder.com/400x300/533483/eee?text=Social+Media",
+    description:
+      "Developed a comprehensive social media management platform supporting multiple networks, content scheduling, analytics, and team collaboration features.",
+    technologies: [
+      "React",
+      "GraphQL",
+      "Node.js",
+      "MySQL",
+      "Redis",
+      "WebSockets",
+    ],
+    images: [
+      "https://via.placeholder.com/800x600/533483/eee?text=Post+Scheduler",
+      "https://via.placeholder.com/800x600/533483/eee?text=Analytics",
+    ],
+    videos: [],
+    link: null,
+  },
 ];
