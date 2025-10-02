@@ -46,6 +46,7 @@ export const workProjects = [
       "/img/english-monkeys.jpeg",
     ],
     videos: ["/img/english-drag.mp4"],
+    link: "https://ea-games-web-production-f9e97a026853.herokuapp.com/9",
   },
   {
     id: "project3",
