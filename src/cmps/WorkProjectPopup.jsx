@@ -1,10 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export function WorkProjectPopup({ project, onClose }) {
+    const [lightboxImage, setLightboxImage] = useState(null);
     useEffect(() => {
         const handleEscape = (e) => {
             if (e.key === 'Escape') {
-                onClose();
+                if (lightboxImage) {
+                    setLightboxImage(null);
+                } else {
+                    onClose();
+                }
             }
         };
         
@@ -15,7 +20,7 @@ export function WorkProjectPopup({ project, onClose }) {
             document.removeEventListener('keydown', handleEscape);
             document.body.style.overflow = 'unset';
         };
-    }, [onClose]);
+    }, [onClose, lightboxImage]);
 
     return (
         <div className="work-project-popup-overlay" onClick={onClose}>
@@ -48,7 +53,12 @@ export function WorkProjectPopup({ project, onClose }) {
                             <h3>Screenshots</h3>
                             <div className="images-grid">
                                 {project.images.map((image, index) => (
-                                    <img key={index} src={image} alt={`${project.title} screenshot ${index + 1}`} />
+                                    <img 
+                                        key={index} 
+                                        src={image} 
+                                        alt={`${project.title} screenshot ${index + 1}`}
+                                        onClick={() => setLightboxImage(image)}
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -77,6 +87,22 @@ export function WorkProjectPopup({ project, onClose }) {
                     )}
                 </div>
             </div>
+            
+            {lightboxImage && (
+                <div className="image-lightbox" onClick={(e) => {
+                    e.stopPropagation();
+                    setLightboxImage(null);
+                }}>
+                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={lightboxImage} alt="Enlarged view" />
+                        <button className="lightbox-close" onClick={() => setLightboxImage(null)}>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

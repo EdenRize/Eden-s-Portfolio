@@ -5,6 +5,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: Gilmer-Medium, sans-serif;
     
     &:hover {
         transform: translateY(-5px);
@@ -37,7 +38,7 @@
             color: $font-clr1;
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-family: Gilmer-Bold, sans-serif;
             
             @include for-narrow-layout {
                 font-size: 1.6rem;
@@ -51,6 +52,7 @@
         p {
             color: $font-clr3;
             font-size: 1rem;
+            font-family: Gilmer-Light, sans-serif;
             
             @include for-narrow-layout {
                 font-size: 1.1rem;

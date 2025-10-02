@@ -3,17 +3,17 @@ export const workProjects = [
     id: "togethering",
     title: "Togethering",
     subtitle: "Frontend Development",
-    image: "https://via.placeholder.com/400x300/1a1a2e/eee?text=E-Commerce",
+    image: "/img/togethering-main.jpeg",
     description:
       "Developed a comprehensive e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard. Implemented microservices architecture for scalability.",
     technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker", "AWS"],
     images: [
-      "https://via.placeholder.com/800x600/1a1a2e/eee?text=Dashboard",
-      "https://via.placeholder.com/800x600/1a1a2e/eee?text=Product+Page",
-      "https://via.placeholder.com/800x600/1a1a2e/eee?text=Checkout",
+      "/img/togethering-main.jpeg",
+      "/img/togethering-bubbles.jpeg",
+      "/img/togethering-phone.jpeg",
+      "/img/togethering-tables.jpeg",
     ],
-    videos: [],
-    link: "https://example.com/project1",
+    videos: ["/img/togethering.mp4"],
   },
   {
     id: "project2",
@@ -63,6 +63,28 @@ export const workProjects = [
   {
     id: "project4",
     title: "Social Media Management Tool",
+    subtitle: "SaaS Product",
+    image: "https://via.placeholder.com/400x300/533483/eee?text=Social+Media",
+    description:
+      "Developed a comprehensive social media management platform supporting multiple networks, content scheduling, analytics, and team collaboration features.",
+    technologies: [
+      "React",
+      "GraphQL",
+      "Node.js",
+      "MySQL",
+      "Redis",
+      "WebSockets",
+    ],
+    images: [
+      "https://via.placeholder.com/800x600/533483/eee?text=Post+Scheduler",
+      "https://via.placeholder.com/800x600/533483/eee?text=Analytics",
+    ],
+    videos: [],
+    link: null,
+  },
+  {
+    id: "project5",
+    title: "5555555",
     subtitle: "SaaS Product",
     image: "https://via.placeholder.com/400x300/533483/eee?text=Social+Media",
     description:
