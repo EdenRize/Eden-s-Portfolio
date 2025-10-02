@@ -5,8 +5,16 @@ export const workProjects = [
     subtitle: "Frontend Development",
     image: "/img/togethering-main.jpeg",
     description:
-      "Developed a comprehensive e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard. Implemented microservices architecture for scalability.",
-    technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker", "AWS"],
+      "Togethering is a community resilience platform that provides interactive map-based incident tracking, organizational networking, and collaborative crisis management tools to help communities prepare for and respond to emergencies and disasters.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Next.js",
+      "Zustand",
+      "AWS S3",
+      "Mapbox GL",
+    ],
     images: [
       "/img/togethering-main.jpeg",
       "/img/togethering-bubbles.jpeg",
