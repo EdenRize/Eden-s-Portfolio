@@ -5,7 +5,7 @@ export const workProjects = [
     subtitle: "Frontend Development",
     image: "/img/togethering-main.jpeg",
     description:
-      "Togethering is a community resilience platform that provides interactive map-based incident tracking, organizational networking, and collaborative crisis management tools to help communities prepare for and respond to emergencies and disasters.",
+      "Togethering is a community resilience platform that tracks antisemitic incidents through interactive maps and connects Jewish organizations to coordinate crisis response and security efforts.",
     technologies: [
       "React",
       "TypeScript",
