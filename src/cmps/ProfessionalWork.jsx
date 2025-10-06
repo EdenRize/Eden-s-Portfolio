@@ -37,9 +37,9 @@ export function ProfessionalWork() {
           spaceBetween={40}
           loop={true}
           allowTouchMove={false}
-          speed={5000} // very long animation time
+          speed={7000}
           autoplay={{
-            delay: 0, // no waiting
+            delay: 0,
             disableOnInteraction: false,
           }}
           freeMode={true}
