@@ -6,6 +6,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: Gilmer-Medium, sans-serif;
+    display: flex;
+    flex-direction: column;
     
     &:hover {
         transform: translateY(-5px);
@@ -33,6 +35,10 @@
     
     .card-content {
         padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         
         h3 {
             color: $font-clr1;

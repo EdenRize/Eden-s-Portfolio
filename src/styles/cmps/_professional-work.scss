@@ -5,13 +5,27 @@
     text-align: center;
     
     .carousel-container {
+        margin-inline: 50px;
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
         position: relative;
         overflow: hidden;
+        
+        .work-projects-swiper {
+            .swiper-slide {
+                height: auto;
+                display: flex;
+                
+                .work-project-card {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
         
         &::before,
         &::after {
