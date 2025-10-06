@@ -1,25 +1,29 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import { WorkProjectCard } from "./WorkProjectCard";
 import { WorkProjectPopup } from "./WorkProjectPopup";
 import { workProjects } from "../data/workProjects";
 
 export function ProfessionalWork() {
+  const swiperRef = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
-  const [isPaused, setIsPaused] = useState(false);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
-    setIsPaused(true);
   };
 
   const handleClosePopup = () => {
     setSelectedProject(null);
-    setIsPaused(false);
   };
+
+  useEffect(() => {
+    if (!swiperRef.current) return;
+    const swiper = swiperRef.current.swiper;
+    if (selectedProject) swiper.autoplay.stop();
+    else swiper.autoplay.start();
+  }, [selectedProject]);
 
   return (
     <div className="professional-work full-section">
@@ -27,32 +31,29 @@ export function ProfessionalWork() {
 
       <div className="carousel-container">
         <Swiper
-          modules={[Navigation, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          speed={2000}
-          autoplay={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          }}
+          ref={swiperRef}
+          modules={[Autoplay]}
+          slidesPerView="auto"
+          spaceBetween={40}
           loop={true}
-          allowTouchMove={true}
-          centeredSlides={false}
-          className="work-projects-swiper"
+          allowTouchMove={false}
+          speed={5000} // very long animation time
+          autoplay={{
+            delay: 0, // no waiting
+            disableOnInteraction: false,
+          }}
+          freeMode={true}
+          freeModeMomentum={false}
+          className="smooth-carousel"
         >
-          {workProjects.map((project) => (
-            <SwiperSlide key={project.id}>
-              <WorkProjectCard
-                project={project}
+          {[...workProjects, ...workProjects].map((project, i) => (
+            <SwiperSlide key={`${project.id}-${i}`} className="carousel-slide">
+              <div
+                className="work-card-clickable"
                 onClick={() => handleProjectClick(project)}
-              />
+              >
+                <WorkProjectCard project={project} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
