@@ -7,7 +7,8 @@ import { WorkProjectPopup } from "./WorkProjectPopup";
 import { workProjects } from "../data/workProjects";
 
 export function ProfessionalWork() {
-  const swiperRef = useRef(null);
+  const swiperRef1 = useRef(null);
+  const swiperRef2 = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleProjectClick = (project) => {
@@ -19,13 +20,15 @@ export function ProfessionalWork() {
   };
 
   useEffect(() => {
-    if (!swiperRef.current) return;
-    const swiper = swiperRef.current.swiper;
-    if (selectedProject) swiper.autoplay.stop();
-    else swiper.autoplay.start();
+    [swiperRef1, swiperRef2].forEach(ref => {
+      if (!ref.current) return;
+      const swiper = ref.current.swiper;
+      if (selectedProject) swiper.autoplay.stop();
+      else swiper.autoplay.start();
+    });
   }, [selectedProject]);
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (swiperRef) => () => {
     if (swiperRef.current && !selectedProject) {
       setTimeout(() => {
         const swiper = swiperRef.current.swiper;
@@ -38,34 +41,67 @@ export function ProfessionalWork() {
     <div className="professional-work full-section">
       <h1 className="font-Gilmer-Outline">Professional Work</h1>
 
-      <div className="carousel-container">
-        <Swiper
-          ref={swiperRef}
-          modules={[Autoplay]}
-          slidesPerView="auto"
-          spaceBetween={40}
-          loop={true}
-          speed={7000}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-          }}
-          freeMode={true}
-          freeModeMomentum={false}
-          onTouchEnd={handleTouchEnd}
-          className="smooth-carousel"
-        >
-          {[...workProjects, ...workProjects].map((project, i) => (
-            <SwiperSlide key={`${project.id}-${i}`} className="carousel-slide">
-              <div
-                className="work-card-clickable"
-                onClick={() => handleProjectClick(project)}
-              >
-                <WorkProjectCard project={project} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="carousels-container">
+        <div className="carousel-wrapper">
+          <Swiper
+            ref={swiperRef1}
+            modules={[Autoplay]}
+            slidesPerView="auto"
+            spaceBetween={20}
+            loop={true}
+            speed={7000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: true,
+            }}
+            freeMode={true}
+            freeModeMomentum={false}
+            onTouchEnd={handleTouchEnd(swiperRef1)}
+            className="smooth-carousel"
+          >
+            {[...workProjects, ...workProjects].map((project, i) => (
+              <SwiperSlide key={`${project.id}-${i}`} className="carousel-slide">
+                <div
+                  className="work-card-clickable"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <WorkProjectCard project={project} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        
+        <div className="carousel-wrapper">
+          <Swiper
+            ref={swiperRef2}
+            modules={[Autoplay]}
+            slidesPerView="auto"
+            spaceBetween={20}
+            loop={true}
+            speed={6000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            freeMode={true}
+            freeModeMomentum={false}
+            onTouchEnd={handleTouchEnd(swiperRef2)}
+            className="smooth-carousel"
+          >
+            {[...workProjects, ...workProjects].map((project, i) => (
+              <SwiperSlide key={`${project.id}-${i}`} className="carousel-slide">
+                <div
+                  className="work-card-clickable"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <WorkProjectCard project={project} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       {selectedProject && (
