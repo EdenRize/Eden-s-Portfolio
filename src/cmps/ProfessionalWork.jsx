@@ -25,6 +25,15 @@ export function ProfessionalWork() {
     else swiper.autoplay.start();
   }, [selectedProject]);
 
+  const handleTouchEnd = () => {
+    if (swiperRef.current && !selectedProject) {
+      setTimeout(() => {
+        const swiper = swiperRef.current.swiper;
+        swiper.autoplay.start();
+      }, 100);
+    }
+  };
+
   return (
     <div className="professional-work full-section">
       <h1 className="font-Gilmer-Outline">Professional Work</h1>
@@ -36,7 +45,6 @@ export function ProfessionalWork() {
           slidesPerView="auto"
           spaceBetween={40}
           loop={true}
-          allowTouchMove={false}
           speed={7000}
           autoplay={{
             delay: 0,
@@ -44,6 +52,7 @@ export function ProfessionalWork() {
           }}
           freeMode={true}
           freeModeMomentum={false}
+          onTouchEnd={handleTouchEnd}
           className="smooth-carousel"
         >
           {[...workProjects, ...workProjects].map((project, i) => (
