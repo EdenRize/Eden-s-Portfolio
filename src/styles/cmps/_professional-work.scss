@@ -1,5 +1,5 @@
 .professional-work {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 6rem 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
         }
 
         .carousel-slide {
-          width: 200px !important;
+          width: 280px !important;
           height: 90% !important;
           flex-shrink: 0;
           display: flex;
@@ -93,22 +93,22 @@
           align-items: center;
 
           @include for-mobile-layout {
-            width: 160px !important;
-          }
-          @include for-table-layout {
-            width: 180px !important;
-          }
-          @include for-narrow-layout {
             width: 220px !important;
           }
+          @include for-table-layout {
+            width: 240px !important;
+          }
+          @include for-narrow-layout {
+            width: 300px !important;
+          }
           @include for-wide-layout {
-            width: 250px !important;
+            width: 350px !important;
           }
           @include for-desktop-layout {
-            width: 280px !important;
+            width: 350px !important;
           }
           @include for-full-layout {
-            width: 320px !important;
+            width: 370px !important;
           }
         }
 

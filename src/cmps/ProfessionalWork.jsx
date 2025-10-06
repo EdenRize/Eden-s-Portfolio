@@ -20,7 +20,7 @@ export function ProfessionalWork() {
   };
 
   useEffect(() => {
-    [swiperRef1, swiperRef2].forEach(ref => {
+    [swiperRef1, swiperRef2].forEach((ref) => {
       if (!ref.current) return;
       const swiper = ref.current.swiper;
       if (selectedProject) swiper.autoplay.stop();
@@ -49,7 +49,7 @@ export function ProfessionalWork() {
             slidesPerView="auto"
             spaceBetween={20}
             loop={true}
-            speed={7000}
+            speed={9000}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
@@ -61,7 +61,10 @@ export function ProfessionalWork() {
             className="smooth-carousel"
           >
             {[...workProjects, ...workProjects].map((project, i) => (
-              <SwiperSlide key={`${project.id}-${i}`} className="carousel-slide">
+              <SwiperSlide
+                key={`${project.id}-${i}`}
+                className="carousel-slide"
+              >
                 <div
                   className="work-card-clickable"
                   onClick={() => handleProjectClick(project)}
@@ -72,7 +75,7 @@ export function ProfessionalWork() {
             ))}
           </Swiper>
         </div>
-        
+
         <div className="carousel-wrapper">
           <Swiper
             ref={swiperRef2}
@@ -80,7 +83,7 @@ export function ProfessionalWork() {
             slidesPerView="auto"
             spaceBetween={20}
             loop={true}
-            speed={6000}
+            speed={9000}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
@@ -91,7 +94,10 @@ export function ProfessionalWork() {
             className="smooth-carousel"
           >
             {[...workProjects, ...workProjects].map((project, i) => (
-              <SwiperSlide key={`${project.id}-${i}`} className="carousel-slide">
+              <SwiperSlide
+                key={`${project.id}-${i}`}
+                className="carousel-slide"
+              >
                 <div
                   className="work-card-clickable"
                   onClick={() => handleProjectClick(project)}
