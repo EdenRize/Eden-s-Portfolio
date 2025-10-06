@@ -47,6 +47,7 @@
       align-items: center;
       user-select: none;
       pointer-events: auto;
+      padding-block: 20px;
 
       .swiper-wrapper {
         transition-timing-function: linear !important; // crucial for smooth flow
