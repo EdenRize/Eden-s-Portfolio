@@ -25,7 +25,7 @@ export const workProjects = [
   },
   {
     id: "english",
-    title: "English Adventure Games",
+    title: "English Adventures",
     subtitle: "Frontend Development",
     image: "/img/english-colors.jpeg",
     description:
@@ -49,10 +49,10 @@ export const workProjects = [
     link: "https://ea-games-web-production-f9e97a026853.herokuapp.com/9",
   },
   {
-    id: "project3",
-    title: "Financial Analytics Platform",
-    subtitle: "Data Visualization",
-    image: "https://via.placeholder.com/400x300/0f3460/eee?text=Analytics",
+    id: "momento",
+    title: "Momento",
+    subtitle: "Mobile App Development",
+    image: "/img/momento-main.png",
     description:
       "Created a real-time financial analytics platform with advanced data visualization, predictive modeling, and automated reporting features. Processed millions of transactions daily.",
     technologies: [
@@ -64,12 +64,14 @@ export const workProjects = [
       "D3.js",
     ],
     images: [
-      "https://via.placeholder.com/800x600/0f3460/eee?text=Analytics+Dashboard",
-      "https://via.placeholder.com/800x600/0f3460/eee?text=Reports",
-      "https://via.placeholder.com/800x600/0f3460/eee?text=Predictions",
+      "/img/momento-1.png",
+      "/img/momento-2.png",
+      "/img/momento-3.png",
+      "/img/momento-4.png",
+      "/img/momento-5.png",
+      "/img/momento-6.png",
     ],
-    videos: [],
-    link: "https://example.com/project3",
+    videos: ["/img/momento-video.mov"],
   },
   {
     id: "project4",
