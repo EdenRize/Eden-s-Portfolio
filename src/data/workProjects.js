@@ -134,17 +134,10 @@ export const workProjects = [
     image: "/img/ziviz.png",
     description:
       'A website used as a business card for the tattoo artist & clothing brand - "ZIVIZ"',
-    technologies: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "Zustand",
-    ],
-    images: [
-      "/img/ziviz.png",
-    ],
+    technologies: ["React", "redux", "vite", "sass", "animate.css"],
+    images: ["/img/ziviz.png"],
     videos: [],
     link: "https://ziviz.art/",
+    github: "https://github.com/EdenRize/ZIVIZ",
   },
 ];
