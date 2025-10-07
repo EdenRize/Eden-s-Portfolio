@@ -127,4 +127,24 @@ export const workProjects = [
     videos: ["/img/monkeytech-video.mov"],
     link: "https://www.monkeytech.co.il/",
   },
+  {
+    id: "ziviz",
+    title: "ZIVIZ",
+    subtitle: "Tattoo Artist & Clothing Brand",
+    image: "/img/ziviz.png",
+    description:
+      'A website used as a business card for the tattoo artist & clothing brand - "ZIVIZ"',
+    technologies: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Zustand",
+    ],
+    images: [
+      "/img/ziviz.png",
+    ],
+    videos: [],
+    link: "https://ziviz.art/",
+  },
 ];
