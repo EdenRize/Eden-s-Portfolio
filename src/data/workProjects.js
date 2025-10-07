@@ -54,14 +54,15 @@ export const workProjects = [
     subtitle: "Mobile App Development",
     image: "/img/momento-main.png",
     description:
-      "Created a real-time financial analytics platform with advanced data visualization, predictive modeling, and automated reporting features. Processed millions of transactions daily.",
+      "A mobile application for booking appointments at local businesses with real-time availability, location-based search, and calendar integration.",
     technologies: [
-      "Angular",
-      "Java",
-      "Spring Boot",
-      "Apache Kafka",
-      "Elasticsearch",
-      "D3.js",
+      "React Native",
+      "TypeScript",
+      "Expo SDK",
+      "Zustand",
+      "NativeWind",
+      "Bugsnag",
+      "EAS",
     ],
     images: [
       "/img/momento-1.png",
