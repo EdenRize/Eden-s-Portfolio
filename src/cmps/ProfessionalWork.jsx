@@ -4,10 +4,12 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { WorkProjectCard } from "./WorkProjectCard";
 import { WorkProjectPopup } from "./WorkProjectPopup";
+import { AllProjectsPopup } from "./AllProjectsPopup";
 import { workProjects } from "../data/workProjects";
 
 export function ProfessionalWork() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -62,6 +64,12 @@ export function ProfessionalWork() {
   return (
     <div className="professional-work full-section">
       <h1 className="font-Gilmer-Outline">Professional Work</h1>
+      <button 
+        className="all-projects-btn" 
+        onClick={() => setShowAllProjects(true)}
+      >
+        All Projects
+      </button>
 
       <div className="carousels-container">
         <div className="carousel-wrapper">
@@ -118,6 +126,14 @@ export function ProfessionalWork() {
         <WorkProjectPopup
           project={selectedProject}
           onClose={handleClosePopup}
+        />
+      )}
+      
+      {showAllProjects && (
+        <AllProjectsPopup 
+          projects={workProjects} 
+          onClose={() => setShowAllProjects(false)}
+          onProjectClick={handleProjectClick}
         />
       )}
     </div>

@@ -6,7 +6,7 @@
   text-align: center;
 
   h1 {
-    margin-block-end: 2rem;
+    margin-block-end: 1rem;
     padding-inline: var(--padding-inline);
     color: $font-clr2;
     font-size: 2.8rem;
@@ -34,6 +34,33 @@
     @include for-full-layout {
       line-height: 8rem;
       font-size: 8.6rem;
+    }
+  }
+  
+  .all-projects-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: $font-clr3;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-block-end: 2rem;
+    transition: all 0.3s ease;
+    font-family: Gilmer-Medium, sans-serif;
+    
+    &:hover {
+      color: $font-clr2;
+      text-underline-offset: 6px;
+    }
+    
+    @include for-narrow-layout {
+      font-size: 1.2rem;
+    }
+    
+    @include for-wide-layout {
+      font-size: 1.3rem;
     }
   }
 
