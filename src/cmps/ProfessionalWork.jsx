@@ -64,8 +64,8 @@ export function ProfessionalWork() {
   return (
     <div className="professional-work full-section">
       <h1 className="font-Gilmer-Outline">Professional Work</h1>
-      <button 
-        className="all-projects-btn" 
+      <button
+        className="all-projects-btn"
         onClick={() => setShowAllProjects(true)}
       >
         All Projects
@@ -128,10 +128,10 @@ export function ProfessionalWork() {
           onClose={handleClosePopup}
         />
       )}
-      
+
       {showAllProjects && (
-        <AllProjectsPopup 
-          projects={workProjects} 
+        <AllProjectsPopup
+          projects={workProjects}
           onClose={() => setShowAllProjects(false)}
           onProjectClick={handleProjectClick}
         />

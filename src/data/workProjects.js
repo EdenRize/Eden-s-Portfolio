@@ -80,7 +80,7 @@ export const workProjects = [
     subtitle: "Mobile App Development",
     image: "/img/momento-business-main.png",
     description:
-      "A mobile application for booking appointments at local businesses with real-time availability, location-based search, and calendar integration.",
+      "A mobile app that enables service providers to manage appointments, track client relationships, and grow their business through integrated scheduling and marketing tools.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -89,15 +89,15 @@ export const workProjects = [
       "NativeWind",
       "Bugsnag",
       "EAS",
+      "Mapbox API",
     ],
     images: [
-      "/img/momento-1.png",
-      "/img/momento-2.png",
-      "/img/momento-3.png",
-      "/img/momento-4.png",
-      "/img/momento-5.png",
-      "/img/momento-6.png",
+      "/img/momento-business-1.png",
+      "/img/momento-business-2.png",
+      "/img/momento-business-3.png",
+      "/img/momento-business-4.png",
+      "/img/momento-business-5.png",
+      "/img/momento-business-6.png",
     ],
-    videos: ["/img/momento-video.mov"],
   },
 ];
