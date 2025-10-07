@@ -100,4 +100,31 @@ export const workProjects = [
       "/img/momento-business-6.png",
     ],
   },
+  {
+    id: "monkeytech",
+    title: "Monkeytech",
+    subtitle: "Web Development",
+    image: "/img/monkeytech-main.png",
+    description:
+      "A dynamic portfolio website showcasing MonkeyTech's software consultancy services with client testimonials, case studies, and interactive animations.",
+    technologies: [
+      "React",
+      "Next.js",
+      "Styled Components",
+      "Material-UI",
+      "Zustand",
+      "i18next",
+      "Lottie",
+    ],
+    images: [
+      "/img/monkeytech-1.png",
+      "/img/monkeytech-2.png",
+      "/img/monkeytech-3.png",
+      "/img/monkeytech-4.png",
+      "/img/monkeytech-5.png",
+      "/img/monkeytech-6.png",
+    ],
+    videos: ["/img/monkeytech-video.mov"],
+    link: "https://www.monkeytech.co.il/",
+  },
 ];
