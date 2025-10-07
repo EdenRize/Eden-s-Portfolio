@@ -24,30 +24,30 @@ export function ProfessionalWork() {
       pauseOnHover: true,
       pauseOnFocus: false,
       rewind: true,
-      speed: 0.5 // Slower speed for smooth scrolling
+      speed: 0.5, // Slower speed for smooth scrolling
     },
     arrows: false,
     pagination: false,
-    fixedWidth: '280px', // Default width
-    gap: '20px',
-    drag: 'free',
+    fixedWidth: "280px", // Default width
+    gap: "20px",
+    drag: "free",
     breakpoints: {
       640: {
-        fixedWidth: '220px',
+        fixedWidth: "220px",
       },
       768: {
-        fixedWidth: '240px',
+        fixedWidth: "240px",
       },
       1024: {
-        fixedWidth: '300px',
+        fixedWidth: "300px",
       },
       1280: {
-        fixedWidth: '350px',
+        fixedWidth: "350px",
       },
       1536: {
-        fixedWidth: '370px',
-      }
-    }
+        fixedWidth: "370px",
+      },
+    },
   };
 
   // Splide options for second carousel (scrolling left)
@@ -55,8 +55,8 @@ export function ProfessionalWork() {
     ...splideOptions1,
     autoScroll: {
       ...splideOptions1.autoScroll,
-      speed: -0.5 // Negative speed for reverse direction
-    }
+      speed: -0.5, // Negative speed for reverse direction
+    },
   };
 
   return (
@@ -69,13 +69,18 @@ export function ProfessionalWork() {
             options={splideOptions1}
             extensions={{ AutoScroll }}
             className="smooth-carousel"
+            onClick={(splide, slide) => {
+              const slideIndex = slide.index;
+              const projectIndex = slideIndex % workProjects.length;
+              handleProjectClick(workProjects[projectIndex]);
+            }}
           >
             {[...workProjects, ...workProjects].map((project, i) => (
-              <SplideSlide key={`${project.id}-${i}`} className="carousel-slide">
-                <div
-                  className="work-card-clickable"
-                  onClick={() => handleProjectClick(project)}
-                >
+              <SplideSlide
+                key={`${project.id}-${i}`}
+                className="carousel-slide"
+              >
+                <div className="work-card-clickable">
                   <WorkProjectCard project={project} />
                 </div>
               </SplideSlide>
@@ -88,13 +93,19 @@ export function ProfessionalWork() {
             options={splideOptions2}
             extensions={{ AutoScroll }}
             className="smooth-carousel"
+            onClick={(splide, slide) => {
+              // Get the project index from the slide
+              const slideIndex = slide.index;
+              const projectIndex = slideIndex % workProjects.length;
+              handleProjectClick(workProjects[projectIndex]);
+            }}
           >
             {[...workProjects, ...workProjects].map((project, i) => (
-              <SplideSlide key={`${project.id}-${i}-2`} className="carousel-slide">
-                <div
-                  className="work-card-clickable"
-                  onClick={() => handleProjectClick(project)}
-                >
+              <SplideSlide
+                key={`${project.id}-${i}-2`}
+                className="carousel-slide"
+              >
+                <div className="work-card-clickable">
                   <WorkProjectCard project={project} />
                 </div>
               </SplideSlide>
