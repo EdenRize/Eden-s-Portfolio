@@ -1,14 +1,12 @@
-import { useRef, useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
+import { useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
 import { WorkProjectCard } from "./WorkProjectCard";
 import { WorkProjectPopup } from "./WorkProjectPopup";
 import { workProjects } from "../data/workProjects";
 
 export function ProfessionalWork() {
-  const swiperRef1 = useRef(null);
-  const swiperRef2 = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleProjectClick = (project) => {
@@ -19,21 +17,45 @@ export function ProfessionalWork() {
     setSelectedProject(null);
   };
 
-  useEffect(() => {
-    [swiperRef1, swiperRef2].forEach((ref) => {
-      if (!ref.current) return;
-      const swiper = ref.current.swiper;
-      if (selectedProject) swiper.autoplay.stop();
-      else swiper.autoplay.start();
-    });
-  }, [selectedProject]);
+  // Splide options for first carousel (scrolling right)
+  const splideOptions1 = {
+    type: "loop",
+    autoScroll: {
+      pauseOnHover: true,
+      pauseOnFocus: false,
+      rewind: true,
+      speed: 0.5 // Slower speed for smooth scrolling
+    },
+    arrows: false,
+    pagination: false,
+    fixedWidth: '280px', // Default width
+    gap: '20px',
+    drag: 'free',
+    breakpoints: {
+      640: {
+        fixedWidth: '220px',
+      },
+      768: {
+        fixedWidth: '240px',
+      },
+      1024: {
+        fixedWidth: '300px',
+      },
+      1280: {
+        fixedWidth: '350px',
+      },
+      1536: {
+        fixedWidth: '370px',
+      }
+    }
+  };
 
-  const handleTouchEnd = (swiperRef) => () => {
-    if (swiperRef.current && !selectedProject) {
-      setTimeout(() => {
-        const swiper = swiperRef.current.swiper;
-        swiper.autoplay.start();
-      }, 100);
+  // Splide options for second carousel (scrolling left)
+  const splideOptions2 = {
+    ...splideOptions1,
+    autoScroll: {
+      ...splideOptions1.autoScroll,
+      speed: -0.5 // Negative speed for reverse direction
     }
   };
 
@@ -43,70 +65,41 @@ export function ProfessionalWork() {
 
       <div className="carousels-container">
         <div className="carousel-wrapper">
-          <Swiper
-            ref={swiperRef1}
-            modules={[Autoplay]}
-            slidesPerView="auto"
-            spaceBetween={20}
-            loop={true}
-            speed={9000}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              reverseDirection: true,
-            }}
-            freeMode={true}
-            freeModeMomentum={false}
-            onTouchEnd={handleTouchEnd(swiperRef1)}
+          <Splide
+            options={splideOptions1}
+            extensions={{ AutoScroll }}
             className="smooth-carousel"
           >
             {[...workProjects, ...workProjects].map((project, i) => (
-              <SwiperSlide
-                key={`${project.id}-${i}`}
-                className="carousel-slide"
-              >
+              <SplideSlide key={`${project.id}-${i}`} className="carousel-slide">
                 <div
                   className="work-card-clickable"
                   onClick={() => handleProjectClick(project)}
                 >
                   <WorkProjectCard project={project} />
                 </div>
-              </SwiperSlide>
+              </SplideSlide>
             ))}
-          </Swiper>
+          </Splide>
         </div>
 
         <div className="carousel-wrapper">
-          <Swiper
-            ref={swiperRef2}
-            modules={[Autoplay]}
-            slidesPerView="auto"
-            spaceBetween={20}
-            loop={true}
-            speed={9000}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
-            freeMode={true}
-            freeModeMomentum={false}
-            onTouchEnd={handleTouchEnd(swiperRef2)}
+          <Splide
+            options={splideOptions2}
+            extensions={{ AutoScroll }}
             className="smooth-carousel"
           >
             {[...workProjects, ...workProjects].map((project, i) => (
-              <SwiperSlide
-                key={`${project.id}-${i}`}
-                className="carousel-slide"
-              >
+              <SplideSlide key={`${project.id}-${i}-2`} className="carousel-slide">
                 <div
                   className="work-card-clickable"
                   onClick={() => handleProjectClick(project)}
                 >
                   <WorkProjectCard project={project} />
                 </div>
-              </SwiperSlide>
+              </SplideSlide>
             ))}
-          </Swiper>
+          </Splide>
         </div>
       </div>
 

@@ -73,43 +73,21 @@
 
       .smooth-carousel {
         height: 100%;
-        display: flex;
-        align-items: center;
-        user-select: none;
-        pointer-events: auto;
 
-        .swiper-wrapper {
-          transition-timing-function: linear !important;
-          align-items: center;
+        .splide__track {
           height: 100%;
         }
 
+        .splide__list {
+          height: 100%;
+          align-items: center;
+        }
+
         .carousel-slide {
-          width: 280px !important;
-          height: 90% !important;
-          flex-shrink: 0;
+          height: 90%;
           display: flex;
           justify-content: center;
           align-items: center;
-
-          @include for-mobile-layout {
-            width: 220px !important;
-          }
-          @include for-table-layout {
-            width: 240px !important;
-          }
-          @include for-narrow-layout {
-            width: 300px !important;
-          }
-          @include for-wide-layout {
-            width: 350px !important;
-          }
-          @include for-desktop-layout {
-            width: 350px !important;
-          }
-          @include for-full-layout {
-            width: 370px !important;
-          }
         }
 
         .work-card-clickable {
