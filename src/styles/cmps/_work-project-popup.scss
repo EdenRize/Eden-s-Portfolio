@@ -20,9 +20,12 @@
     border-radius: 20px;
     width: 100%;
     max-width: 900px;
+    height: 90vh;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
     font-family: Gilmer-Medium, sans-serif;
     
     .close-btn {
@@ -49,14 +52,20 @@
     }
     
     .popup-content {
-        padding: 3rem;
-        
-        @include for-mobile-layout {
-            padding: 2rem;
-        }
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+        min-height: 0;
         
         .popup-header {
-            margin-bottom: 2rem;
+            flex-shrink: 0;
+            padding: 3rem 3rem 1.5rem 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            
+            @include for-mobile-layout {
+                padding: 2rem 2rem 1rem 2rem;
+            }
             
             h2 {
                 color: $font-clr1;
@@ -73,6 +82,17 @@
                 color: $font-clr3;
                 font-size: 1.2rem;
                 font-family: Gilmer-Light, sans-serif;
+            }
+        }
+        
+        .popup-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem 3rem;
+            min-height: 0;
+            
+            @include for-mobile-layout {
+                padding: 1.5rem 2rem;
             }
         }
         

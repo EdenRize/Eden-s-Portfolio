@@ -37,7 +37,8 @@ export function WorkProjectPopup({ project, onClose }) {
                         <p className="subtitle">{project.subtitle}</p>
                     </div>
                     
-                    <p className="description">{project.description}</p>
+                    <div className="popup-body">
+                        <p className="description">{project.description}</p>
                     
                     <div className="technologies">
                         <h3>Technologies Used</h3>
@@ -85,6 +86,7 @@ export function WorkProjectPopup({ project, onClose }) {
                             </a>
                         </div>
                     )}
+                    </div>
                 </div>
             </div>
             
