@@ -3,7 +3,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import { WorkCarousel } from "./WorkCarousel";
 import { WorkProjectPopup } from "./WorkProjectPopup";
 import { AllProjectsPopup } from "./AllProjectsPopup";
-import { workProjects } from "../data/workProjects";
+import { workProjects1, workProjects2 } from "../data/workProjects";
 
 export function ProfessionalWork() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -70,15 +70,15 @@ export function ProfessionalWork() {
       </button>
 
       <div className="carousels-container">
-        <WorkCarousel 
+        <WorkCarousel
           options={splideOptions1}
-          projects={workProjects}
+          projects={workProjects1}
           onProjectClick={handleProjectClick}
         />
 
-        <WorkCarousel 
+        <WorkCarousel
           options={splideOptions2}
-          projects={workProjects}
+          projects={workProjects2}
           onProjectClick={handleProjectClick}
           keySuffix="-2"
         />
@@ -93,7 +93,7 @@ export function ProfessionalWork() {
 
       {showAllProjects && (
         <AllProjectsPopup
-          projects={workProjects}
+          projects={[...workProjects1, ...workProjects2]}
           onClose={() => setShowAllProjects(false)}
           onProjectClick={handleProjectClick}
         />
