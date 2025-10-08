@@ -1,29 +1,5 @@
 export const workProjects = [
   {
-    id: "togethering",
-    title: "Togethering",
-    subtitle: "Frontend Development",
-    image: "/img/togethering-main.jpeg",
-    description:
-      "Togethering is a community resilience platform that tracks antisemitic incidents through interactive maps and connects Jewish organizations to coordinate crisis response and security efforts.",
-    technologies: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Zustand",
-      "AWS S3",
-      "Mapbox GL",
-    ],
-    images: [
-      "/img/togethering-main.jpeg",
-      "/img/togethering-bubbles.jpeg",
-      "/img/togethering-phone.jpeg",
-      "/img/togethering-tables.jpeg",
-    ],
-    videos: ["/img/togethering.mp4"],
-  },
-  {
     id: "english",
     title: "English Adventures",
     subtitle: "Frontend Development",
@@ -47,6 +23,32 @@ export const workProjects = [
     ],
     videos: ["/img/english-drag.mp4"],
     link: "https://ea-games-web-production-f9e97a026853.herokuapp.com/9",
+  },
+  {
+    id: "togethering",
+    title: "Togethering",
+    subtitle: "Frontend Development",
+    image: "/img/togethering-main.jpeg",
+    description:
+      "Togethering is a community resilience platform that tracks antisemitic incidents through interactive maps and connects Jewish organizations to coordinate crisis response and security efforts.",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Zustand",
+      "AWS S3",
+      "Mapbox GL",
+    ],
+    images: [
+      "/img/togethering-main.jpeg",
+      "/img/togethering-bubbles.jpeg",
+      "/img/togethering-phone.jpeg",
+      "/img/togethering-modal.png",
+      "/img/togethering-tables.jpeg",
+      "/img/togethering-modal-2.png",
+    ],
+    videos: ["/img/togethering.mp4"],
   },
   {
     id: "momento",
