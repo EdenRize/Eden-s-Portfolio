@@ -83,7 +83,7 @@ export function ProfessionalWork() {
               handleProjectClick(workProjects[projectIndex]);
             }}
           >
-            {[...workProjects, ...workProjects].map((project, i) => (
+            {workProjects.map((project, i) => (
               <SplideSlide
                 key={`${project.id}-${i}`}
                 className="carousel-slide"
@@ -108,7 +108,7 @@ export function ProfessionalWork() {
               handleProjectClick(workProjects[projectIndex]);
             }}
           >
-            {[...workProjects, ...workProjects].map((project, i) => (
+            {workProjects.map((project, i) => (
               <SplideSlide
                 key={`${project.id}-${i}-2`}
                 className="carousel-slide"
