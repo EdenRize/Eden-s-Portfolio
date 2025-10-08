@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { WorkProjectCard } from "./WorkProjectCard";
+import { WorkCarousel } from "./WorkCarousel";
 import { WorkProjectPopup } from "./WorkProjectPopup";
 import { AllProjectsPopup } from "./AllProjectsPopup";
 import { workProjects } from "../data/workProjects";
@@ -72,54 +70,18 @@ export function ProfessionalWork() {
       </button>
 
       <div className="carousels-container">
-        <div className="carousel-wrapper">
-          <Splide
-            options={splideOptions1}
-            extensions={{ AutoScroll }}
-            className="smooth-carousel"
-            onClick={(splide, slide) => {
-              const slideIndex = slide.index;
-              const projectIndex = slideIndex % workProjects.length;
-              handleProjectClick(workProjects[projectIndex]);
-            }}
-          >
-            {workProjects.map((project, i) => (
-              <SplideSlide
-                key={`${project.id}-${i}`}
-                className="carousel-slide"
-              >
-                <div className="work-card-clickable">
-                  <WorkProjectCard project={project} />
-                </div>
-              </SplideSlide>
-            ))}
-          </Splide>
-        </div>
+        <WorkCarousel 
+          options={splideOptions1}
+          projects={workProjects}
+          onProjectClick={handleProjectClick}
+        />
 
-        <div className="carousel-wrapper">
-          <Splide
-            options={splideOptions2}
-            extensions={{ AutoScroll }}
-            className="smooth-carousel"
-            onClick={(splide, slide) => {
-              // Get the project index from the slide
-              const slideIndex = slide.index;
-              const projectIndex = slideIndex % workProjects.length;
-              handleProjectClick(workProjects[projectIndex]);
-            }}
-          >
-            {workProjects.map((project, i) => (
-              <SplideSlide
-                key={`${project.id}-${i}-2`}
-                className="carousel-slide"
-              >
-                <div className="work-card-clickable">
-                  <WorkProjectCard project={project} />
-                </div>
-              </SplideSlide>
-            ))}
-          </Splide>
-        </div>
+        <WorkCarousel 
+          options={splideOptions2}
+          projects={workProjects}
+          onProjectClick={handleProjectClick}
+          keySuffix="-2"
+        />
       </div>
 
       {selectedProject && (
