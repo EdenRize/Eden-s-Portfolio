@@ -99,6 +99,7 @@ export const workProjects = [
       "/img/momento-business-5.png",
       "/img/momento-business-6.png",
     ],
+    videos: ["/img/momento-business-video.mov"],
   },
   {
     id: "monkeytech",
