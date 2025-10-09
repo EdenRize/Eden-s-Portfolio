@@ -24,7 +24,9 @@ export const workProjects1 = [
       "/img/momento-business-5.png",
       "/img/momento-business-6.png",
     ],
-    videos: ["/img/momento-business-video.mov"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760027853/momento-business-video_y8lizf.mov",
+    ],
   },
   {
     id: "togethering",
@@ -50,7 +52,9 @@ export const workProjects1 = [
       "/img/togethering-tables.jpeg",
       "/img/togethering-modal-2.png",
     ],
-    videos: ["/img/togethering.mp4"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760028182/togethering_ugobcy.mp4",
+    ],
   },
   {
     id: "monkeytech",
@@ -76,7 +80,9 @@ export const workProjects1 = [
       "/img/monkeytech-5.png",
       "/img/monkeytech-6.png",
     ],
-    videos: ["/img/monkeytech-video.mov"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760028108/monkeytech-video_pie0my.mov",
+    ],
     link: "https://www.monkeytech.co.il/",
   },
   {
@@ -95,7 +101,9 @@ export const workProjects1 = [
       "/img/ziviz.png",
       "/img/ziviz-5.png",
     ],
-    videos: ["/img/ziviz-video.mov"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760028256/ziviz-video_zsggvp.mov",
+    ],
     link: "https://ziviz.art/",
     github: "https://github.com/EdenRize/ZIVIZ",
   },
@@ -117,7 +125,9 @@ export const workProjects2 = [
       "/img/meckano-5.png",
       "/img/meckano-6.png",
     ],
-    videos: ["/img/meckano-video.mov"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760027766/meckano-video_wdzzsd.mov",
+    ],
   },
   {
     id: "myday",
@@ -175,7 +185,9 @@ export const workProjects2 = [
       "/img/english-dashboard.jpeg",
       "/img/english-monkeys.jpeg",
     ],
-    videos: ["/img/english-drag.mp4"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760027615/english-drag_cil9s6.mp4",
+    ],
     link: "https://ea-games-web-production-f9e97a026853.herokuapp.com/9",
   },
   {
@@ -202,6 +214,8 @@ export const workProjects2 = [
       "/img/momento-5.png",
       "/img/momento-6.png",
     ],
-    videos: ["/img/momento-video.mov"],
+    videos: [
+      "https://res.cloudinary.com/dkvliixzt/video/upload/v1760027938/momento-video_nqvi9d.mov",
+    ],
   },
 ];
