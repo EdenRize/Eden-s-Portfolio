@@ -42,9 +42,18 @@ export function Hero() {
           </div>
 
           <p className="font-Gilmer-Light pre-line">
-            I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
-            <br />I leverage modern technologies — including <span className="font-Gilmer-Bold">ReactJS, Vue, React Native and NodeJS</span> — to develop high-quality, dynamic web applications.
-            <br />My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.
+            I'm a Frontend / Full-Stack Developer with hands-on experience since
+            October 2023, specializing in building seamless and intuitive user
+            experiences.
+            <br />I leverage modern technologies — including{" "}
+            <span className="font-Gilmer-Bold">
+              ReactJS, Vue, React Native and NodeJS
+            </span>{" "}
+            — to develop high-quality, dynamic web applications.
+            <br />
+            My focus is on delivering clean, efficient, and scalable solutions,
+            and I take pride in leading development efforts to drive impactful
+            results.
           </p>
         </div>
 
@@ -74,9 +83,18 @@ export function Hero() {
 
         <div className="flex space-between content-container">
           <p className="font-Gilmer-Light pre-line">
-            I'm a Full-Stack Developer and Tech Lead with hands-on experience since October 2023, specializing in building seamless and intuitive user experiences.
-            <br />I leverage modern technologies — including <span className="font-Gilmer-Bold">ReactJS, Vue, React Native and NodeJS</span> — to develop high-quality, dynamic web applications.
-            <br />My focus is on delivering clean, efficient, and scalable solutions, and I take pride in leading development efforts to drive impactful results.
+            I'm a Frontend / Full-Stack Developer with hands-on experience since
+            October 2023, specializing in building seamless and intuitive user
+            experiences.
+            <br />I leverage modern technologies — including{" "}
+            <span className="font-Gilmer-Bold">
+              ReactJS, Vue, React Native and NodeJS
+            </span>{" "}
+            — to develop high-quality, dynamic web applications.
+            <br />
+            My focus is on delivering clean, efficient, and scalable solutions,
+            and I take pride in leading development efforts to drive impactful
+            results.
           </p>
 
           <div className="flex align-center justify-center img-container">
