@@ -71,6 +71,10 @@
     overflow: hidden;
     position: relative;
     margin-inline: 30px;
+    
+    @media (max-width: 768px) {
+      padding-block: 1rem;
+    }
 
     .carousel-wrapper {
       flex: 1;
