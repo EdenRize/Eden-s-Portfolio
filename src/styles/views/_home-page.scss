@@ -5,4 +5,13 @@
     scroll-behavior: smooth;
     scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
+    
+    @media (max-width: 768px) {
+        &::after {
+            content: '';
+            display: block;
+            height: 100px;
+            scroll-snap-align: none;
+        }
+    }
 }
