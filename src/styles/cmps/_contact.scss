@@ -3,9 +3,18 @@
     flex-direction: column;
     justify-content: center;
     padding: 3rem var(--padding-inline);
+    
+    @media (max-width: 768px) {
+        padding: 1.5rem 1rem;
+        justify-content: space-between;
+    }
 
     .info-container {
         margin-block-end: 90px;
+        
+        @media (max-width: 768px) {
+            margin-block-end: 2rem;
+        }
 
         @include for-full-layout {
             margin-block-end: 120px;
